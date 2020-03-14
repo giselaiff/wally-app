@@ -16,7 +16,7 @@ mongoose
 		useUnifiedTopology: true,
 	})
 	.then(() => {
-		console.log(`conected to ${dbPath}`);
+		console.log(`conected`);
 	})
 	.catch(error => {
 		console.error(error);
