@@ -130,7 +130,7 @@ Event model
         },
     
     }
-​
+    
 ## Links
 ​
 ### Trello
@@ -141,10 +141,10 @@ https://trello.com/b/ybfw23uX/wally
 ​
 The url to your repository and to your deployed project
 ​
-[Repository Link](http://github.com/)
+[Repository Link](https://github.com/giselaiff/wally-app)
 ​
-[Deploy Link](http://heroku.com/)
+[Deploy Link](https://wally-app.herokuapp.com/)
 ​
 ### Slides
 ​
-[Slides Link](http://slides.com/)
+[Slides Link](https://docs.google.com/presentation/d/1tOLuwUvpzCOtFdH6OkuZ_E5bU6r55Im3P26ZLEQgAKw/edit#slide=id.p)
