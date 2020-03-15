@@ -3,8 +3,12 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-
+const hbs = require('hbs');
 const mongoose = require('mongoose');
+const flash = require('connect-flash');
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
+
 require('dotenv').config();
 
 const dbPath = process.env.MONGODB_URI;
@@ -16,18 +20,17 @@ mongoose
 		useUnifiedTopology: true,
 	})
 	.then(() => {
-		console.log(`Conected to Wally...`);
+		console.log(`conected to ${dbPath}`);
 	})
 	.catch(error => {
 		console.error(error);
 	});
 
-
-
-
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const eventsRouter = require('./routes/events')
+
+hbs.registerPartials(path.join(__dirname, '/views/partials'));
 
 const app = express();
 
@@ -35,30 +38,48 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
+//
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(
+	session({
+		store: new MongoStore({
+			mongooseConnection: mongoose.connection,
+			ttl: 24 * 60 * 60, // 1 day
+		}),
+		secret: 'wally',
+		resave: true,
+		saveUninitialized: true,
+		name: 'wally',
+		cookie: {
+			maxAge: 24 * 60 * 60 * 1000,
+		},
+	})
+);
+app.use(flash());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/events', eventsRouter)
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
+app.use((req, res, next) => {
+	next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+app.use((err, req, res) => {
+	// set locals, only providing error in development
+	res.locals.message = err.message;
+	res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+	// render the error page
+	res.status(err.status || 500);
+	res.render('error');
 });
 
 module.exports = app;
