@@ -33,9 +33,9 @@ router.post('/add', (req, res, next) => {
 router.get('/', (req, res, next) => {
 	const { currentUser } = req.session;
 	Event.find()
-		.then(event => {
+		.then(events => {
 			res.render('events/list', {
-				event,
+				events,
 				currentUser,
 				info: req.flash('info'),
 			});
