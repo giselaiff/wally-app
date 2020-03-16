@@ -5,9 +5,8 @@ const User = require('../models/User');
 const router = express.Router();
 const saltRounds = 10;
 
-// eslint-disable-next-line no-unused-vars
 router.get('/', (req, res, next) => {
-	res.render('index', { title: 'Wally' });
+	res.render('index', { title: 'W a l l y' });
 });
 
 router.get('/signup', (req, res, next) => {
@@ -17,12 +16,12 @@ router.get('/signup', (req, res, next) => {
 router.post('/signup', (req, res, next) => {
 	const { username, password } = req.body;
 	if (username === '' || password === '') {
-		res.render('auth/signup', { error: 'no pueden estar vacios' });
+		res.render('auth/signup', { error: 'Upss! The fields are empty' });
 	} else {
 		User.findOne({ username })
 			.then(user => {
 				if (user) {
-					res.render('auth/signup', { error: 'nombre de usuario ya existe' });
+					res.render('auth/signup', { error: 'Hey! You are already registered!' });
 				} else {
 					const salt = bcrypt.genSaltSync(saltRounds);
 					const hashedPassword = bcrypt.hashSync(password, salt);
@@ -53,22 +52,22 @@ router.get('/login', (req, res, next) => {
 router.post('/login', (req, res, next) => {
 	const { username, password } = req.body;
 	if (username === '' || password === '') {
-		req.flash('error', 'no pueden estar vacios');
+		req.flash('error', 'Upss! The fields are empty');
 		res.redirect('/login');
 	} else {
 		User.findOne({ username })
 			.then(user => {
 				if (!user) {
-					req.flash('error', 'no estas registrado');
+					req.flash('error', 'You are not registered... join us!');
 					res.redirect('/login');
 				} else {
 					console.log(bcrypt.compareSync(password, user.hashedPassword));
 					if (bcrypt.compareSync(password, user.hashedPassword)) {
 						req.session.currentUser = user;
-						req.flash('info', 'welcome !!!!!');
+						req.flash('info', 'We missed you!');
 						res.redirect('/events');
 					} else {
-						req.flash('error', 'usuario o contraseña incorrectos');
+						req.flash('error', 'Username or password are incorrect');
 						res.redirect('/login');
 					}
 				}

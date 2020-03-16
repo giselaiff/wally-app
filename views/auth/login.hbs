@@ -1,4 +1,4 @@
-<h1>login</h1>
+<h1>Log in</h1>
 <form id="form" action="/login" method="POST">
   <label for="username">Username</label><br>
   <input type="text" name="username" placeholder="Your username">
@@ -6,8 +6,10 @@
   <label for="password">Password</label><br>
   <input type="password" name="password" placeholder="********">
 
-  <button type="submit">login</button>
+  <button type="submit">Enter</button>
   {{#if error}}
   {{error}}
   {{/if}}
 </form>
+
+<a href='./'>Back</a>

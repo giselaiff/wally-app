@@ -20,7 +20,7 @@ mongoose
 		useUnifiedTopology: true,
 	})
 	.then(() => {
-		console.log(`conected to ${dbPath}`);
+		console.log(`conected to Wally DB`);
 	})
 	.catch(error => {
 		console.error(error);
