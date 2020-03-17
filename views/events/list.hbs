@@ -6,7 +6,7 @@
 <ul>
   {{#each events }}
   <li>
-    <a href="/events/{{this._id}}/update">{{ this.name }}</a>
+    <a href="/events/{{this._id}}">{{ this.name }}</a>
     <form action="/events/{{this._id}}/delete" method="post">
       <button type="submit">delete</button>
     </form>
