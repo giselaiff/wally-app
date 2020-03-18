@@ -3,12 +3,32 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const eventSchema = new Schema({
-	name: {
-		type: String,
-		required: true,
-	},
-	description: String,
-	hour: Number,
+	
+		userId: { 
+			type: Schema.Types.ObjectId,
+			ref: 'User'
+		},
+
+    	name: {
+            type: String,
+            required: true,
+        },
+		
+    	description: {
+            type: String,
+            required: true,
+		},
+		
+        hour: {
+            type: Number,
+            required: true,
+		},
+
+    	location: {
+            type: String,
+            required: true,
+        },
+    
 });
 
 const Event = mongoose.model('Event', eventSchema);

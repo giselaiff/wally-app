@@ -1,5 +1,4 @@
-<div class="container-individual-Movie">
-    
+<div class="container-individual-Event">
     <div class="image-event">
         <img src="{{eventData.image}}" alt="image-event">
     </div>
@@ -7,7 +6,12 @@
         <h1>{{eventData.name}}</h1>
         <h2>{{eventData.description}}</h2>
         <h2>{{eventData.hour}}</h2>
+         <h2>{{eventData.location}}</h2>
         <a href="/events">Go back</a>
-
-    </div>
+    {{#if isOwner}}
+        <div id="updateBtn"></div>
+            <a href="/events/{{eventData._id}}/update">Update</a>
+        </div>
+    {{/if}}
+    
 </div>
