@@ -47,4 +47,15 @@ router.post('/:id', (req, res, next) => {
     .catch(next);
 });
 
+// POST /profile/:id/delete
+router.post('/:id/delete', (req, res, next) => {
+	const { id } = req.params;
+
+	User.findByIdAndDelete(id)
+		.then(() => {
+            res.redirect ('/')
+		})
+		.catch(next);
+});
+
 module.exports = router;

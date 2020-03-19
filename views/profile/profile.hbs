@@ -9,6 +9,10 @@
 <div class="profile-modifications">
 <a href="/profile/{{currentUser._id}}/edit">Edit</a>
 </div>
+  <form action="/profile/{{currentUser._id}}/delete" method="post">
+      <button type="submit">Delete</button>
+    </form>
+
 {{/if}}
 <a href="/logout">logout</a>
 
