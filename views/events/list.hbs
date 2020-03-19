@@ -1,8 +1,9 @@
 <h1>List all events</h1>
-<p>welcome {{ currentUser.username }}</p>
+<p>Welcome {{ currentUser.username }}</p>
 {{#if info}}
 {{info}}
 {{/if}}
+<a href="/profile/{{currentUser._id}}">My Profile</a>
 <ul>
   {{#each events }}
   <li>

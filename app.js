@@ -27,7 +27,8 @@ mongoose
 	});
 
 const indexRouter = require('./routes/index');
-const eventsRouter = require('./routes/events')
+const eventsRouter = require('./routes/events');
+const profileRouter = require('./routes/profile');
 
 hbs.registerPartials(path.join(__dirname, '/views/partials'));
 
@@ -62,7 +63,8 @@ app.use(
 app.use(flash());
 
 app.use('/', indexRouter);
-app.use('/events', eventsRouter)
+app.use('/events', eventsRouter);
+app.use('/profile', profileRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

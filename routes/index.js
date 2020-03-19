@@ -61,9 +61,13 @@ router.post('/login', (req, res, next) => {
 					req.flash('error', 'You are not registered... join us!');
 					res.redirect('/login');
 				} else {
+					//ACORDARME DE AÑADIR AQUÍ PROPIEDADES OBJETO USER
 					console.log(bcrypt.compareSync(password, user.hashedPassword));
 					if (bcrypt.compareSync(password, user.hashedPassword)) {
-						req.session.currentUser = user;
+						req.session.currentUser = {
+							username : user.username,
+							_id : user._id,
+						};
 						req.flash('info', 'We missed you!');
 						res.redirect('/events');
 					} else {
