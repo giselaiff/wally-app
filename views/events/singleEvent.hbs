@@ -11,6 +11,9 @@
     {{#if isOwner}}
         <div id="updateBtn"></div>
             <a href="/events/{{eventData._id}}/update">Update</a>
+            <form action="/events/{{eventData._id}}/delete" method="post">
+      <button type="submit">delete</button>
+    </form>
         </div>
     {{/if}}
     

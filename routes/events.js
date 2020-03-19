@@ -56,6 +56,7 @@ router.get('/:id', (req, res, next) => {
     Event.findOne({_id: paramEventId})
         .then (singleEvent => {
             let isOwner;
+            console.log()
             if(singleEvent.userId == req.session.currentUser._id){
                 isOwner = true
             }else{
@@ -96,7 +97,6 @@ router.post('/:id', (req, res, next) => {
 
 
 
-module.exports = router;
 
 
 
@@ -105,3 +105,13 @@ module.exports = router;
 
 
 //| POST | /event/:id/delete  | Delete an event  |
+router.post('/:id/delete', (req, res, next) => {
+	const { id } = req.params;
+
+	Event.findByIdAndDelete(id)
+		.then(() => {
+			res.redirect('/events');
+		})
+		.catch(next);
+});
+module.exports = router;
