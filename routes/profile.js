@@ -14,11 +14,8 @@ router.get('/:id', (req, res, next) => {
         let isOwner;
         if(modifyProfile._id == req.session.currentUser._id){
             isOwner = true
-            console.log("true")
         }else{
             isOwner = false
-            console.log("false")
-
         }
         res.render('profile/profile' , {currentUser: modifyProfile, isOwner: isOwner})
     })  
@@ -57,5 +54,39 @@ router.post('/:id/delete', (req, res, next) => {
 		})
 		.catch(next);
 });
+//GET profile/:id - Other profile
 
-module.exports = router;
+router.get('/:id', (req, res, next) => {
+     const paramUserId = req.params.id;
+     User.findOne({_id: paramUserId})
+     .then (modifyProfile => {
+         if(modifyProfile._id == req.session.currentUser._id){
+             isOwner = true
+         }else{
+             isOwner = false
+         }
+         res.render('profile/profile' , {currentUser: modifyProfile, isOwner: isOwner})
+     })  
+     .catch(next);
+ });
+
+ //POST profile/:id - other profile
+
+
+
+
+
+ router.post('/:id', (req, res, next) => {
+    const { id } = req.params;
+    const {username } = req.body;
+    console.log(req);
+    User.update({ _id : id }, { $set: { username }})
+    .then(() => {
+        res.redirect(`/profile/${id}`);
+    })
+    .catch(next);
+});
+
+
+
+ module.exports = router;

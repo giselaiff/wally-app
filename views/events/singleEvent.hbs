@@ -6,15 +6,37 @@
         <h1>{{eventData.name}}</h1>
         <h2>{{eventData.description}}</h2>
         <h2>{{eventData.hour}}</h2>
-         <h2>{{eventData.location}}</h2>
-        <a href="/events">Go back</a>
-    {{#if isOwner}}
-        <div id="updateBtn"></div>
-            <a href="/events/{{eventData._id}}/update">Update</a>
-            <form action="/events/{{eventData._id}}/delete" method="post">
-      <button type="submit">delete</button>
-    </form>
-        </div>
+        <h2>{{eventData.location}}</h2>
+
+    {{#if isJoined}}
+        <form action="/events/{{eventData._id}}/unjoin" method="post">
+            <button type="submit">Unjoin</button>
+        </form>
+        {{else}}
+            <form action="/events/{{eventData._id}}/join" method="post">
+                <button type="submit">Join</button>
+            </form>
     {{/if}}
-    
+
+        {{!-- FOREACH DEL ARRAY JOIN --}}
+
+        <ul class= "join_list">
+            {{#each eventData.joined}}
+            <li> <a href="/profile/{{this._id}}">{{this.username}}</a></li>
+            {{/each}}
+        </ul>
+
+
+        <a href="/events">Go back</a>
+
+
+        {{#if isOwner}}
+            <div id="updateBtn">
+                <a href="/events/{{eventData._id}}/update">Update</a>
+            </div>
+            <form action="/events/{{eventData._id}}/delete" method="post">
+                <button type="submit">delete</button>
+            </form>
+        {{/if}}
+    </div>
 </div>

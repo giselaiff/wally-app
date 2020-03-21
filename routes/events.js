@@ -54,18 +54,21 @@ router.get('/:id', (req, res, next) => {
     const paramEventId = req.params.id;
 
     Event.findOne({_id: paramEventId})
+        .populate("joined")
         .then (singleEvent => {
-            let isOwner;
-            console.log()
-            if(singleEvent.userId == req.session.currentUser._id){
-                isOwner = true
-            }else{
-                isOwner = false
-            }
-            res.render('events/singleEvent', {eventData: singleEvent, isOwner: isOwner})
+            const isOwner = singleEvent.userId == req.session.currentUser._id;
+            let isJoined;
+            singleEvent.joined.forEach((user) => {
+                if (user._id == req.session.currentUser._id){
+                    isJoined = true;
+                }
+                else {
+                    isJoined = false;
+                }
+            })
+            res.render('events/singleEvent', {eventData: singleEvent, isOwner, isJoined})
         })
         .catch(next);
-
 });
 
 //GET Update event info:  /event/:id/update
@@ -95,15 +98,6 @@ router.post('/:id', (req, res, next) => {
 });
 
 
-
-
-
-
-
-
-
-
-
 //| POST | /event/:id/delete  | Delete an event  |
 router.post('/:id/delete', (req, res, next) => {
 	const { id } = req.params;
@@ -114,4 +108,60 @@ router.post('/:id/delete', (req, res, next) => {
 		})
 		.catch(next);
 });
+
+//POST |, /event/join | Join an event  |
+ router.post('/:id/:join', (req, res, next) => {
+    const { id, join } = req.params;
+    const myUserId = req.session.currentUser._id;
+    let updateAction;
+    if( join === "join"){
+        updateAction = "$push"
+    } 
+    else {
+        updateAction = "$pull"
+    }
+    Event.update({
+        "_id": id }, 
+       {
+           [updateAction]: {
+               "joined": myUserId
+            }
+       }
+   )
+    .then(() => {
+        res.redirect(`/events/${id}`);
+    })
+    .catch(next);
+
+});
+/*
+router.post('/:id/unjoin', (req, res, next) => {
+    const { id } = req.params;
+    const myUserId = req.session.currentUser._id;
+    if(join) {
+        event update con push
+    } else {
+        event update con pull
+    }
+    Event.update({
+         "_id": id }, 
+        {
+            "$push": {
+                "joined": {
+                    "$each": [myUserId]
+             }
+        }
+    })
+    .then(() => {
+        res.redirect(`/events/${id}`);
+    })
+    .catch(next);
+
+});
+*/
+
+//POST /event/
+
 module.exports = router;
+
+    
