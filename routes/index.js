@@ -69,7 +69,7 @@ router.post('/login', (req, res, next) => {
 							_id : user._id,
 						};
 						req.flash('info', 'We missed you!');
-						res.redirect('/events');
+						res.redirect('/moods');
 					} else {
 						req.flash('error', 'Username or password are incorrect');
 						res.redirect('/login');
@@ -81,9 +81,6 @@ router.post('/login', (req, res, next) => {
 			});
 	}
 });
-
-
-
 
 router.get('/logout', (req, res, next) => {
 	req.session.destroy(err => {

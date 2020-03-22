@@ -1,0 +1,24 @@
+<h1>Pick your mood</h1>
+<form id="form" action="/moods" method="POST">
+<label for="moods">Moods</label> <br/>
+<select id="moods" name="moods">
+  <option value="" selected="selected">- selecciona -</option>
+  <option value="{{mood.enum[0]}}">Chill</option>
+  <option value="{{mood.enum[1]}}">Medium</option>
+  <option value="{{mood.enum[2]}}">Hard</option>
+</select>
+
+  <button type="submit">Go!</button>
+  {{#if error}}
+  {{error}}
+  {{/if}}
+</form>
+
+
+
+<a href="/logout">logout</a>
+
+<a href="/events">Back</a>
+
+
+

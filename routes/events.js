@@ -6,9 +6,10 @@ const Event = require('../models/Event');
 const User = require('../models/User');
 
 
+
 // GET event/add: create an event  
 
-router.get('/add', (req, res, next) => {
+router.get('/add', middleware.checkIfUserLoggedIn, (req, res, next) => {
 	res.render('events/create');
 });
 
@@ -134,33 +135,6 @@ router.post('/:id/delete', (req, res, next) => {
     .catch(next);
 
 });
-/*
-router.post('/:id/unjoin', (req, res, next) => {
-    const { id } = req.params;
-    const myUserId = req.session.currentUser._id;
-    if(join) {
-        event update con push
-    } else {
-        event update con pull
-    }
-    Event.update({
-         "_id": id }, 
-        {
-            "$push": {
-                "joined": {
-                    "$each": [myUserId]
-             }
-        }
-    })
-    .then(() => {
-        res.redirect(`/events/${id}`);
-    })
-    .catch(next);
-
-});
-*/
-
-//POST /event/
 
 module.exports = router;
 

@@ -12,6 +12,13 @@ const userSchema = new Schema(
 			createdAt: 'created_at',
 			updatedAt: 'updated_at',
 		},
+	},
+	{
+	  mood: { 
+		type: String, 
+		required: true, 
+		enum:["Chill", "Medium", "Hard"]
+	},
 	}
 );
 
