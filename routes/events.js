@@ -134,33 +134,7 @@ router.post('/:id/delete', (req, res, next) => {
     .catch(next);
 
 });
-/*
-router.post('/:id/unjoin', (req, res, next) => {
-    const { id } = req.params;
-    const myUserId = req.session.currentUser._id;
-    if(join) {
-        event update con push
-    } else {
-        event update con pull
-    }
-    Event.update({
-         "_id": id }, 
-        {
-            "$push": {
-                "joined": {
-                    "$each": [myUserId]
-             }
-        }
-    })
-    .then(() => {
-        res.redirect(`/events/${id}`);
-    })
-    .catch(next);
 
-});
-*/
-
-//POST /event/
 
 module.exports = router;
 
