@@ -1,6 +1,6 @@
-var express = require('express');
-var router = express.Router();
-const Review = require('../models/Review');
+const express = require('express');
+const bcrypt = require('bcrypt');
+const router = express.Router();
 const middleware = require('../helpers/authMiddleware');
 const Event = require('../models/Event');
 const User = require('../models/User');
@@ -34,7 +34,7 @@ router.post('/add', (req, res, next) => {
 
 //GET all events: /events
 
-router.get('/', (req, res, next) => {
+router.get('/', middleware.checkIfUserLoggedIn, (req, res, next) => {
 	const { currentUser } = req.session;
 	Event.find()
 		.then(events => {
@@ -134,34 +134,6 @@ router.post('/:id/delete', (req, res, next) => {
     .catch(next);
 
 });
-/*
-router.post('/:id/unjoin', (req, res, next) => {
-    const { id } = req.params;
-    const myUserId = req.session.currentUser._id;
-    if(join) {
-        event update con push
-    } else {
-        event update con pull
-    }
-    Event.update({
-         "_id": id }, 
-        {
-            "$push": {
-                "joined": {
-                    "$each": [myUserId]
-             }
-        }
-    })
-    .then(() => {
-        res.redirect(`/events/${id}`);
-    })
-    .catch(next);
 
-});
-*/
-
-//POST /event/
 
 module.exports = router;
-
-    

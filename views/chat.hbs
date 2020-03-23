@@ -1,0 +1,24 @@
+<h1>Chat</h1>
+<ul id="messages"></ul>
+ <form action="/events/{{event._id}}/chat" method="post">
+
+    <input id="m" autocomplete="off" /><button>Send</button>
+</form>
+<script>
+    var socket = io();
+    socket.on('connect', function(data) {
+        socket.emit('joined', 'Hello World from client');
+    });
+    socket.on('acknowledge', function(data) {
+        alert(data);
+    });
+    $('form').submit(function(){
+        socket.emit('chat message', $('#m').val());
+        $('#messages').append($('<li>').text($('#m').val()));
+        $('#m').val('');
+        return false;
+    });
+    socket.on('response message', function(data) {
+        $('#messages').append($('<li>').text(data));
+    });
+</script>

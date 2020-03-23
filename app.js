@@ -9,8 +9,11 @@ const flash = require('connect-flash');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 
+const app = express();
+
 require('dotenv').config();
 
+//
 const dbPath = process.env.MONGODB_URI;
 
 mongoose
@@ -31,8 +34,6 @@ const eventsRouter = require('./routes/events');
 const profileRouter = require('./routes/profile');
 
 hbs.registerPartials(path.join(__dirname, '/views/partials'));
-
-const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -65,6 +66,10 @@ app.use(flash());
 app.use('/', indexRouter);
 app.use('/events', eventsRouter);
 app.use('/profile', profileRouter);
+
+//
+
+//
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

@@ -2,6 +2,10 @@ const express = require('express');
 const bcrypt = require('bcrypt');
 const User = require('../models/User');
 
+const app = require('express')();
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
+
 const router = express.Router();
 const saltRounds = 10;
 
@@ -82,9 +86,33 @@ router.post('/login', (req, res, next) => {
 	}
 });
 
+//GET /:id/chat
 
+router.get('/:id/chat', (req, res, next) =>{
+	res.render('chat');
+ });
 
+io.on('connection', function(socket){
+    console.log('a user connected');
+    socket.on('joined', function(data) {
+        console.log(data);
+        socket.emit('acknowledge', 'Acknowledged');
+    });
+    socket.on('chat message', function(msg){
+        console.log('message: ' + msg);
+        socket.emit('response message', msg + '  from server');
+        //socket.broadcast.emit('response message', msg + '  from server');
+    });
+});
 
+/*
+//POST /:id/chat
+
+router.post('/:id/chat', (req, res, next) => {
+	
+});*/
+
+ //GET /logout
 router.get('/logout', (req, res, next) => {
 	req.session.destroy(err => {
 		if (err) {
