@@ -69,7 +69,7 @@ router.post('/login', (req, res, next) => {
 							_id : user._id,
 						};
 						req.flash('info', 'We missed you!');
-						res.redirect('/moods');
+						res.redirect('/mood');
 					} else {
 						req.flash('error', 'Username or password are incorrect');
 						res.redirect('/login');
@@ -80,6 +80,17 @@ router.post('/login', (req, res, next) => {
 				next(error);
 			});
 	}
+});
+
+//MOODS
+//GET /mood
+
+router.get('/mood', (req, res, next) => {
+            res.render('mood');
+});
+
+router.post('/mood', (req, res, next) => {
+	res.redirect(`/events`);
 });
 
 router.get('/logout', (req, res, next) => {

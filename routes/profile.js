@@ -36,9 +36,9 @@ router.get('/:id/edit', (req, res, next) => {
 
 router.post('/:id', (req, res, next) => {
     const { id } = req.params;
-    const {username } = req.body;
+    const {username, age, description, city, mood } = req.body;
     console.log(req);
-    User.update({ _id : id }, { $set: { username }})
+    User.update({ _id : id }, { $set: { username, age, description, city, mood  }})
     .then(() => {
         res.redirect(`/profile/${id}`);
     })
@@ -79,9 +79,9 @@ router.get('/:id', (req, res, next) => {
 
  router.post('/:id', (req, res, next) => {
     const { id } = req.params;
-    const {username } = req.body;
+    const {username, age, description, city, mood  } = req.body;
     console.log(req);
-    User.update({ _id : id }, { $set: { username }})
+    User.update({ _id : id }, { $set: { username, age, description, city, mood  }})
     .then(() => {
         res.redirect(`/profile/${id}`);
     })
