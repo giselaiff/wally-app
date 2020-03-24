@@ -86,8 +86,20 @@ router.post('/login', (req, res, next) => {
 //GET /mood
 
 router.get('/mood', (req, res, next) => {
+	const moodEvent = req.body.mood;
+	let moodUser = req.body.mood;
+	if (moodEvent ==== moodUser){
+
+	}
+	 //Buscamos un mood que exista con el id de usuario
+	 User.mood.findOne({userId: user._id}). {
+		
+	
+		}
             res.render('mood');
 });
+
+//POST 
 
 router.post('/mood', (req, res, next) => {
 	res.redirect(`/events`);
