@@ -1,6 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 const User = require('../models/User');
+const Event = require('../models/Event');
 
 const app = require('express')();
 const http = require('http').Server(app);
@@ -86,27 +87,29 @@ router.post('/login', (req, res, next) => {
 	}
 });
 
-//GET /:id/chat
+//MOODS
+//GET /mood
 
-router.get('/:id/chat', (req, res, next) =>{
-	res.render('chat');
- });
-
-io.on('connection', function(socket){
-    console.log('a user connected');
-    socket.on('joined', function(data) {
-        console.log(data);
-        socket.emit('acknowledge', 'Acknowledged');
-    });
-    socket.on('chat message', function(msg){
-        console.log('message: ' + msg);
-        socket.emit('response message', msg + '  from server');
-        //socket.broadcast.emit('response message', msg + '  from server');
-    });
+router.get('/mood', (req, res, next) => {
+    res.render('mood');
 });
 
-/*
-//POST /:id/chat
+//POST 
+
+
+router.post('/mood', (req, res, next) => {
+	//comparar el mood escogido con el mood del evento
+	//necesito: mood evento y mood usuario
+	const moodEvent = req.body.mood;
+	let moodUser= req.body.mood;
+	Event.find( {mood} )
+		.then(() => {
+			if (moodEvent === moodUser){
+				res.redirect(`/events`);
+			}
+		})	
+
+});
 
 router.post('/:id/chat', (req, res, next) => {
 	
@@ -118,7 +121,7 @@ router.get('/logout', (req, res, next) => {
 		if (err) {
 			next(err);
 		}
-		res.redirect('/login');
+		res.redirect('/');
 	});
 });
 

@@ -7,6 +7,8 @@
         <h2>{{eventData.description}}</h2>
         <h2>{{eventData.hour}}</h2>
         <h2>{{eventData.location}}</h2>
+        <h2>{{eventData.mood}}</h2>
+
 
     {{#if isJoined}}
         <form action="/events/{{eventData._id}}/unjoin" method="post">

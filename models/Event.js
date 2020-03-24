@@ -31,10 +31,17 @@ const eventSchema = new Schema({
         
         joined: [
             {
-                type: Schema.Types.ObjectId,
-                ref: 'User'
-            }
-        ]
+            type: Schema.Types.ObjectId,
+            ref: 'User'
+        }
+        ],
+
+         mood: [{ 
+            type: String, 
+            required: true, 
+            enum:["Chill", "Medium", "Hard"]
+        }
+    ],
 });
 
 const Event = mongoose.model('Event', eventSchema);
