@@ -85,7 +85,7 @@ router.post('/login', (req, res, next) => {
 /*
 //MOODS
 //GET /mood
-
+/*
 router.get('/mood', (req, res, next) => {
     res.render('mood');
 });
