@@ -1,8 +1,117 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+@import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap');
+/*this is from 0px to 600px*/
+
+*{
+  box-sizing: border-box;
+
 }
 
-a {
-  color: #00B7FF;
+h1 {
+  color: whitesmoke;
+  text-shadow: black 0.1em 0.1em 0.2em;
+	font-size: 120px;
+  margin: 10px 0;
+  font-family: 'Liu Jian Mao Cao', cursive;
+  text-align: center;
+  font-size: 70px;
+  margin-top: 200px;
 }
+
+.logoimg{
+  max-width: 200px;
+  max-height: 200px;
+  margin: 10px auto;
+  display:block;
+  filter: drop-shadow(5px 5px 10px black);
+  margin-top: 30px;
+
+}
+
+h2{
+  background-image: url(https://media.giphy.com/media/gCxGeZAimDeXm/giphy.gif);
+	background-size: cover;
+	color: transparent;
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
+	font-size: 120px;
+  margin: 10px 0;
+  font-family: 'Liu Jian Mao Cao', cursive;
+  text-align: center;
+  font-size: 70px;
+  margin-top: 25px;
+}
+
+nav{
+  max-width: 200px;
+  max-height: 200px;
+  margin:10px auto;
+  display:block;
+  filter: drop-shadow(5px 5px 10px black);
+  margin-top: 55px;
+
+}
+
+.button{
+  font-family: 'Baloo Da 2', cursive;
+  font-size: 20px;
+  text-decoration:none;
+  text-align: center;
+  color: whitesmoke;
+  margin:10px;
+  padding: 3px;
+  display:block;
+  margin-top: 5px;
+  background-color: rgba(206, 28, 28, 0.872);
+}
+
+a:hover {
+  color:  rgba(206, 28, 28, 0.872);
+  background-color: whitesmoke;
+}
+
+body {
+  background-image: url(/images/photo-1585002640812-f164768c4435.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+  
+}
+
+footer{
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 400px;
+  color: whitesmoke;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+/*LOGIN - SIGNUP*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*this is from 600px onwards
+@media (min-width: 600px) {
+
+}*/

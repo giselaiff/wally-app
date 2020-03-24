@@ -1,14 +1,14 @@
 var express = require('express');
 var router = express.Router();
-const Review = require('../models/Review');
 const middleware = require('../helpers/authMiddleware');
 const Event = require('../models/Event');
 const User = require('../models/User');
 
 
+
 // GET event/add: create an event  
 
-router.get('/add', (req, res, next) => {
+router.get('/add', middleware.checkIfUserLoggedIn, (req, res, next) => {
 	res.render('events/create');
 });
 
@@ -16,7 +16,7 @@ router.get('/add', (req, res, next) => {
 //POST events/:id
 
 router.post('/add', (req, res, next) => {
-    const { name, description, hour, location } = req.body;
+    const { name, description, hour, location, mood } = req.body;
     const userId = req.session.currentUser._id
     Event.create({
         userId,
@@ -24,6 +24,7 @@ router.post('/add', (req, res, next) => {
 		description,
         hour,
         location,
+        mood,
 	})
 		.then(() => {
 			res.redirect('/events');
@@ -87,9 +88,9 @@ router.get('/:id/update', (req, res, next) => {
 router.post('/:id', (req, res, next) => {
     const { id } = req.params;
 
-    const {name, description, hour, location} = req.body;
+    const {name, description, hour, location, mood} = req.body;
     
-    Event.update({ _id : id }, { $set: { name, description, hour, location }})
+    Event.update({ _id : id }, { $set: { name, description, hour, location, mood }})
     .then(() => {
         res.redirect(`/events/${id}`);
     })
@@ -135,7 +136,4 @@ router.post('/:id/delete', (req, res, next) => {
 
 });
 
-
 module.exports = router;
-
-    

@@ -1,8 +1,18 @@
 <form action="/profile/{{profileData._id}}" method="post">
-  <label for="name">name</label>
+  <label for="name">Name</label>
   <input type="text" name="username" id="user-name" placeholder="name" value="{{profileData.username}}">
+
+  <label for="age">Age</label>
+  <input type="text" name="age" id="user-age" placeholder="age" value="{{profileData.age}}">
+
+  <label for="description">About me</label>
+  <input type="text" name="description" id="user-description" value="{{profileData.description}}">
+
+  <label for="city">City</label>
+  <input type="text" name="city" id="user-city" placeholder="city" value="{{profileData.city}}">
+
+  <label for="mood">Mood</label>
+  <input type="text" name="mood" id="user-mood" placeholder="Chill/Medium/Hard" value="{{profileData.mood}}">
 
   <button type="submit">submit</button>
 </form>
-
-</div>  
