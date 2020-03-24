@@ -36,8 +36,10 @@ router.post('/add', (req, res, next) => {
 //GET all events: /events
 
 router.get('/', (req, res, next) => {
-	const { currentUser } = req.session;
-	Event.find()
+    const { currentUser } = req.session;
+    const moodUser= req.body.mood;
+
+	Event.find({mood})
 		.then(events => {
 			res.render('events/list', {
 				events,
