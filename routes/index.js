@@ -1,6 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 const User = require('../models/User');
+const Event = require('../models/Event');
 
 const router = express.Router();
 const saltRounds = 10;
@@ -86,23 +87,23 @@ router.post('/login', (req, res, next) => {
 //GET /mood
 
 router.get('/mood', (req, res, next) => {
-	const moodEvent = req.body.mood;
-	let moodUser = req.body.mood;
-	if (moodEvent ==== moodUser){
-
-	}
-	 //Buscamos un mood que exista con el id de usuario
-	 User.mood.findOne({userId: user._id}). {
-		
-	
-		}
-            res.render('mood');
+    res.render('mood');
 });
 
 //POST 
 
 router.post('/mood', (req, res, next) => {
-	res.redirect(`/events`);
+	//comparar el mood escogido con el mood del evento
+	//necesito: mood evento y mood usuario
+	const moodEvent = req.body.mood;
+	let moodUser= req.body.mood;
+	Event.find( {mood} )
+		.then(() => {
+			if (moodEvent === moodUser){
+				res.redirect(`/events`);
+			}
+		})	
+
 });
 
 router.get('/logout', (req, res, next) => {
