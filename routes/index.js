@@ -70,7 +70,7 @@ router.post('/login', (req, res, next) => {
 							_id : user._id,
 						};
 						req.flash('info', 'We missed you!');
-						res.redirect('/mood');
+						res.redirect('/events');
 					} else {
 						req.flash('error', 'Username or password are incorrect');
 						res.redirect('/login');
@@ -85,7 +85,7 @@ router.post('/login', (req, res, next) => {
 
 //MOODS
 //GET /mood
-
+/*
 router.get('/mood', (req, res, next) => {
     res.render('mood');
 });
@@ -93,17 +93,11 @@ router.get('/mood', (req, res, next) => {
 router.post('/mood', (req, res, next) => {
 	//comparar el mood escogido con el mood del evento
 	//necesito: mood evento y mood usuario
-	const moodEvent = req.body.mood;
 	let moodUser= req.body.mood;
-	Event.find( {mood} )
-		.then(() => {
-			if (moodEvent === moodUser){
-				res.redirect(`/events`);
-			}
-		})	
+	
 
 });
-
+*/
 router.get('/logout', (req, res, next) => {
 	req.session.destroy(err => {
 		if (err) {

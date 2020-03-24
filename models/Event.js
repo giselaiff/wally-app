@@ -33,15 +33,16 @@ const eventSchema = new Schema({
             {
             type: Schema.Types.ObjectId,
             ref: 'User'
-        }
+            }
         ],
 
-         mood: [{ 
+         mood: [
+            { 
             type: String, 
             required: true, 
             enum:["Chill", "Medium", "Hard"]
-        }
-    ],
+            }
+        ],
 });
 
 const Event = mongoose.model('Event', eventSchema);
