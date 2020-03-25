@@ -38,7 +38,7 @@ router.post('/add', (req, res, next) => {
 router.get('/', (req, res, next) => {
     const { currentUser } = req.session;
     const { mood } = currentUser;
-    let moodToFind = '';
+    let moodToFind;
     if (mood === 'Chill' || mood === 'Medium' || mood === 'Hard') {
         moodToFind = mood;
         console.log("hola")

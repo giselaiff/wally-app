@@ -30,12 +30,12 @@ const userSchema = new Schema(
 		type: String,
 	},
 	
-	mood: [
+	mood:
 		{ 
         type: String, 
         enum:["Chill", "Medium", "Hard"]
 		}
-	],
+,
 });
 
 const User = mongoose.model('User', userSchema);
