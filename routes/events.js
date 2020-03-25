@@ -36,16 +36,37 @@ router.post('/add', (req, res, next) => {
 //GET all events: /events
 
 router.get('/', (req, res, next) => {
-	const { currentUser } = req.session;
-	Event.find()
-		.then(events => {
-			res.render('events/list', {
-				events,
-				currentUser,
-				info: req.flash('info'),
-			});
-		})
-		.catch(next);
+    const { currentUser } = req.session;
+    const { mood } = currentUser;
+    let moodToFind;
+    if (mood ==='Chill' || mood === 'Medium' || mood === 'Hard') {
+        moodToFind = mood;
+        console.log("hola")
+	    Event.find( { mood: moodToFind } )
+		    .then(events => {
+            
+                console.log("hola2")
+
+			    res.render('events/list', {
+			    	events,
+                    currentUser,
+                    mood,
+			    	info: req.flash('info'),
+			    });
+            })
+            .catch(next);
+    } 
+    else {
+        Event.find({})
+            .then(events => {
+                res.render('events/list', {
+                    events,
+                    currentUser,
+                    info: req.flash('info'),
+                })
+            })
+       
+    }
 });
 
 // POST see one event:  /event/:id

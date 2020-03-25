@@ -66,6 +66,7 @@ router.post('/login', (req, res, next) => {
 					console.log(bcrypt.compareSync(password, user.hashedPassword));
 					if (bcrypt.compareSync(password, user.hashedPassword)) {
 						req.session.currentUser = {
+							mood: user.mood,
 							username : user.username,
 							_id : user._id,
 						};
@@ -85,7 +86,7 @@ router.post('/login', (req, res, next) => {
 
 //MOODS
 //GET /mood
-
+/*
 router.get('/mood', (req, res, next) => {
     res.render('mood');
 });
@@ -96,18 +97,12 @@ router.get('/mood', (req, res, next) => {
 router.post('/mood', (req, res, next) => {
 	//comparar el mood escogido con el mood del evento
 	//necesito: mood evento y mood usuario
-	const moodEvent = req.body.mood;
 	let moodUser= req.body.mood;
-	Event.find( {mood} )
-		.then(() => {
-			if (moodEvent === moodUser){
-				res.redirect(`/events`);
-			}
-		})	
+	
 
 });
 
-
+*/
 router.get('/logout', (req, res, next) => {
 	req.session.destroy(err => {
 		if (err) {
