@@ -7,8 +7,12 @@
   <input type="text" name="hour" id="event-hour" value="{{event.hour}}">
   <label for="location">location</label>
   <input type="text" name="location" id="event-location" value="{{event.location}}">
-   <label for="mood">mood</label>
-  <input type="text" name="mood" id="event-mood" placeholder="Chill/Medium/Hard" value="{{event.mood}}">
-  
+  <label for="mood">Change the event's mood: </label>
+  <select id="mood">
+  <option value="">--Select--</option>
+  <option value="{{eventData.mood}}">Chill</option>
+  <option value="{{eventData.mood}}">Medium</option>
+  <option value="{{eventData.mood}}">Hard</option>
+</select> 
   <button type="submit">submit</button>
 </form>

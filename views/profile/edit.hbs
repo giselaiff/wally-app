@@ -11,8 +11,13 @@
   <label for="city">City</label>
   <input type="text" name="city" id="user-city" placeholder="city" value="{{profileData.city}}">
 
-  <label for="mood">Mood</label>
-  <input type="text" name="mood" id="user-mood" placeholder="Chill/Medium/Hard" value="{{profileData.mood}}">
+  <label for="mood">Change your mood: </label>
+  <select id="mood">
+  <option value="">--Select--</option>
+  <option value="{{profileData.mood}}">Chill</option>
+  <option value="{{profileData.mood}}">Medium</option>
+  <option value="{{profileData.mood}}">Hard</option>
+</select> 
 
   <button type="submit">submit</button>
 </form>

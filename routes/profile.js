@@ -38,7 +38,7 @@ router.post('/:id', (req, res, next) => {
     const { id } = req.params;
     const {username, age, description, city, mood } = req.body;
     console.log(req);
-    User.update({ _id : id }, { $set: { username, age, description, city, mood  }})
+    User.update({ _id : id }, { $set: { username, age, description, city, mood }})
     .then(() => {
         res.redirect(`/profile/${id}`);
     })

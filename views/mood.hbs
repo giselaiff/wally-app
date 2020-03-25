@@ -1,8 +1,13 @@
 <h1>Pick your mood</h1>
 <form action="/events" method="post">
-  <label for="mood">Mood</label>
-  <input type="text" name="mood" id="user-mood" placeholder="Chill/Medium/Hard" value="">
-  <button type="submit">Go!</button>
+  <label for="mood">Select your mood: </label>
+  <select id="mood">
+  <option value="">--Select--</option>
+  <option value="{{profileData.mood}}">Chill</option>
+  <option value="{{profileData.mood}}">Medium</option>
+  <option value="{{profileData.mood}}">Hard</option>
+</select>
+  <button type="submit">submit</button>
 </form>
 
 
