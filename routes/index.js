@@ -66,6 +66,7 @@ router.post('/login', (req, res, next) => {
 					console.log(bcrypt.compareSync(password, user.hashedPassword));
 					if (bcrypt.compareSync(password, user.hashedPassword)) {
 						req.session.currentUser = {
+							mood: user.mood,
 							username : user.username,
 							_id : user._id,
 						};
