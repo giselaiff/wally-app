@@ -1,14 +1,14 @@
 <form action="/events/{{event._id}}" method="post">
-  <label for="name">name</label> <br>
-  <input type="text" name="name" id="event-name" placeholder="name" value="{{event.name}}"> <br>
-  <label for="description">description</label> <br>
-  <input type="text" name="description" id="event-description" value="{{event.description}}"> <br>
-  <label for="hour">hour</label> <br>
-  <input type="text" name="hour" id="event-hour" value="{{event.hour}}"> <br>
-  <label for="location">location</label> <br>
-  <input type="text" name="location" id="event-location" value="{{event.location}}"> <br>
-   <label for="mood">mood</label> <br>
+  <label for="name">Name</label> <br>
+  <input type="text" name="name" id="event-name" placeholder="Name" value="{{event.name}}"> <br>
+  <label for="description">Description</label> <br>
+  <input type="text" name="description" id="event-description" placeholder="Description"value="{{event.description}}"> <br>
+  <label for="hour">Hour</label> <br>
+  <input type="text" name="hour" id="event-hour" placeholder="Hour"value="{{event.hour}}"> <br>
+  <label for="location">Location</label> <br>
+  <input type="text" name="location" id="event-location" placeholder="Location"value="{{event.location}}"> <br>
+   <label for="mood">Mood</label> <br>
   <input type="text" name="mood" id="event-mood" placeholder="Chill/Medium/Hard" value="{{event.mood}}"> <br>
   
-  <button type="submit"class="nextpage">submit</button>
+  <button type="submit"class="nextpage">Submit</button>
 </form>

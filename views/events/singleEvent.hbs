@@ -21,7 +21,7 @@
 
     {{#if isJoined}}
         <form action="/events/{{eventData._id}}/unjoin" method="post">
-            <button type="submit">Unjoin</button>
+            <button type="submit"class="nextpage">Unjoin</button>
         </form>
         {{else}}
             <form action="/events/{{eventData._id}}/join" method="post">
@@ -44,7 +44,7 @@
         {{#if isOwner}}
                 <a href="/events/{{eventData._id}}/update"class="button">Update</a>
             <form action="/events/{{eventData._id}}/delete" method="post">
-                <button type="submit" class="nextpage">delete</button>
+                <button type="submit" class="nextpage">Delete</button>
             </form>
         {{/if}}
 </div>

@@ -1,14 +1,14 @@
 {{!-- action to route post --}}
 <form action="/events/add" method="post">
-  <label for="name">name</label>
-  <input type="text" name="name" id="event-name" placeholder="name">
-  <label for="description">description</label>
-  <input type="text" name="description" id="event-description">
-  <label for="hour">hour</label>
-  <input type="text" name="hour" id="event-hour">
-  <label for="location">location</label>
-  <input type="text" name="location" id="event-location">
- <label for="mood">mood</label>
-  <input type="text" name="mood" id="event-mood" placeholder="Chill/Medium/Hard" value="{{eventData.mood}}">
-  <button type="submit"class="nextpage">submit</button>
+  <label for="name">Name:</label> <br>
+  <input type="text" name="name" id="event-name" placeholder="Name"><br>
+  <label for="description">Description:</label><br>
+  <input type="text" name="description" id="event-description"placeholder="Description"><br>
+  <label for="hour">Hour:</label><br>
+  <input type="text" name="hour" id="event-hour"placeholder="Hour"><br>
+  <label for="location">Location:</label><br>
+  <input type="text" name="location" id="event-location"placeholder="Location"><br>
+ <label for="mood">Mood:</label><br>
+  <input type="text" name="mood" id="event-mood" placeholder="Chill/Medium/Hard" value="{{eventData.mood}}"><br>
+  <button type="submit"class="nextpage">Submit</button>
 </form>
