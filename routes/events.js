@@ -39,14 +39,11 @@ router.get('/', (req, res, next) => {
     const { currentUser } = req.session;
     const { mood } = currentUser;
     let moodToFind;
+    console.log(req.session)
     if (mood ==='Chill' || mood === 'Medium' || mood === 'Hard') {
         moodToFind = mood;
-        console.log("hola")
 	    Event.find( { mood: moodToFind } )
 		    .then(events => {
-            
-                console.log("hola2")
-
 			    res.render('events/list', {
 			    	events,
                     currentUser,
