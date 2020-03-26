@@ -8,7 +8,6 @@ const User = require('../models/User');
 // get /profile/:id
 // hacer comprobación :id === session.currentUser -> enseñar el boton
 router.get('/:id', middleware.checkIfUserLoggedIn, (req, res, next) => {
-   // if (req.session.user._id) {
     const paramUserId = req.params.id;
     User.findOne({_id: paramUserId})
     .then (modifyProfile => {
@@ -38,9 +37,15 @@ router.post('/:id', (req, res, next) => {
     const { id } = req.params;
     const {username, age, description, city, mood } = req.body;
     console.log(req);
-    User.update({ _id : id }, { $set: { username, age, description, city, mood  }})
-    .then(() => {
-        res.redirect(`/profile/${id}`);
+    // User.update({ _id : id }, { $set: { username, age, description, city, mood  }})
+    User.findByIdAndUpdate(id,{ $set: { username, age, description, city, mood  }},{new: true} )
+    .then((user) => {
+        req.session.currentUser = {
+            mood: user.mood,
+            username: user.username,
+            _id: user._id,
+        }
+        res.redirect(`/profile/${id}`);        
     })
     .catch(next);
 });
@@ -55,39 +60,5 @@ router.post('/:id/delete', (req, res, next) => {
 		})
 		.catch(next);
 });
-//GET profile/:id - Other profile
-
-router.get('/:id', (req, res, next) => {
-     const paramUserId = req.params.id;
-     User.findOne({_id: paramUserId})
-     .then (modifyProfile => {
-         if(modifyProfile._id == req.session.currentUser._id){
-             isOwner = true
-         }else{
-             isOwner = false
-         }
-         res.render('profile/profile' , {currentUser: modifyProfile, isOwner: isOwner})
-     })  
-     .catch(next);
- });
-
- //POST profile/:id - other profile
-
-
-
-
-
- router.post('/:id', (req, res, next) => {
-    const { id } = req.params;
-    const {username, age, description, city, mood  } = req.body;
-    console.log(req);
-    User.update({ _id : id }, { $set: { username, age, description, city, mood  }})
-    .then(() => {
-        res.redirect(`/profile/${id}`);
-    })
-    .catch(next);
-});
-
-
 
  module.exports = router;
