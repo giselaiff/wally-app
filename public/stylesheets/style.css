@@ -1,13 +1,12 @@
 
 @import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap');
-/*this is from 0px to 600px*/
 
 body {
   background-image: url(/images/redline.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  
+  background-size: cover;  
+  margin: 30px;
 }
 
 .logoname{
@@ -31,7 +30,7 @@ h1 {
 .logoimg{
   max-width: 200px;
   max-height: 200px;
-  margin: 10px auto;
+  margin: auto;
   display:block;
   filter: drop-shadow(5px 5px 10px black);
   margin-top: 30px;
@@ -52,15 +51,6 @@ h2{
   margin-top: 25px;
 }
 
-nav{
-  max-width: 200px;
-  max-height: 200px;
-  margin:10px auto;
-  display:block;
-  filter: drop-shadow(5px 5px 10px black);
-  margin-top: 20px;
-
-}
 
 .button{
   font-family: 'Baloo Da 2', cursive;
@@ -68,11 +58,15 @@ nav{
   text-decoration:none;
   text-align: center;
   color: whitesmoke;
-  margin:10px;
   padding: 3px;
   display:block;
   margin-top: 5px;
   background-color: rgba(206, 28, 28, 0.872);
+  max-width: 200px;
+  max-height: 200px;
+  margin:10px auto;
+  filter: drop-shadow(5px 5px 10px black);
+  margin-top: 20px;
 }
 
 a:hover {
@@ -131,23 +125,59 @@ form input[type="text"],form input[type="password"]{
 
 }
 
-/*PROFILE-OTHER PROFILES*/
+/*EVENTS*/
 
- 
+h3{
+  text-align: center;
+  font-family: 'Baloo Da 2', cursive;
+  font-size: 20px;
+}
 
+ul{
+  padding: 5px;
+}
 
+li{
+  font-family: 'Baloo Da 2', cursive;
+  font-size: 20px;
+  display:block;
+  text-align: center;
+  background-size: 100%;
+  margin-top: 40px;
 
+}
 
+.buttonadd{
+  font-family: 'Baloo Da 2', cursive;
+  font-size: 25px;
+  text-decoration:none;
+  text-align: center;
+  color: whitesmoke;
+  margin:10px;
+  padding: 3px;
+  display:block; 
+  position: fixed;
+  bottom: 20px;
+  right: 20px; 
+  margin-top: 5px;
+  background-color: rgba(206, 28, 28, 0.872);
+  filter: drop-shadow(5px 5px 12px black);
+  border-radius: 50%;
+  width: 40px;
+}
 
+.eventsimg{
+  margin-left: 5%;
+  width: 90%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  text-align: center;
+  align-content: center;
+}
 
-
-
-
-
-
-
-
-/*this is from 600px onwards
-@media (min-width: 600px) {
-
-}*/
+a{
+  text-decoration: none;
+  color: black;
+}

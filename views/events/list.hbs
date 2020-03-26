@@ -1,22 +1,18 @@
-<h1>List all events</h1>
-<p>Welcome {{ currentUser.username }}</p>
+<h3>Welcome {{ currentUser.username }}</h3>
 {{#if info}}
 {{info}}
 {{/if}}
 <nav >
 <a href="/profile/{{currentUser._id}}" class="button">My Profile</a>
 </nav>
+
 <ul>
   {{#each events }}
   <li>
-    <a href="/events/{{this._id}}">{{ this.name }}</a>
-    
+    <a href="/events/{{this._id}}" >{{ this.name }}<img src="{{eventData.image}}" class="eventsimg">
   </li>
   {{/each}}
 </ul>
 
-<nav >
-<a href="/events/add"class="button">create an event</a>
-<a href="/logout"class="button">logout</a>
 
-</nav>
+<a href="/events/add"class="buttonadd">+</a>
