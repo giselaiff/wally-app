@@ -79,11 +79,22 @@ router.get('/:id', (req, res, next) => {
 
  router.post('/:id', (req, res, next) => {
     const { id } = req.params;
+
     const {username, age, description, city, mood  } = req.body;
-    console.log(req);
+
     User.update({ _id : id }, { $set: { username, age, description, city, mood  }})
     .then(() => {
-        res.redirect(`/profile/${id}`);
+        req.session.currentUser = {
+            mood: mood,
+            username: username,
+            _id: id,
+        }
+        req.session.save()
+        .then(()=>{
+            console.log(req.session.currentUser)
+            res.redirect(`/profile/${id}`);
+        })
+        
     })
     .catch(next);
 });
