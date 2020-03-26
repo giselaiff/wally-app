@@ -3,20 +3,29 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap');
 /*this is from 0px to 600px*/
 
-*{
-  box-sizing: border-box;
+body {
+  background-image: url(/images/redline.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
 
+.logoname{
+  max-width: 200px;
+  max-height: 200px;
+  margin: 10px auto;
+  display:block;
+  margin-top: 5px;
 }
 
 h1 {
-  color: whitesmoke;
-  text-shadow: black 0.1em 0.1em 0.2em;
+  color: rgb(194, 37, 37);
 	font-size: 120px;
   margin: 10px 0;
   font-family: 'Liu Jian Mao Cao', cursive;
   text-align: center;
   font-size: 70px;
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
 .logoimg{
@@ -49,7 +58,7 @@ nav{
   margin:10px auto;
   display:block;
   filter: drop-shadow(5px 5px 10px black);
-  margin-top: 55px;
+  margin-top: 20px;
 
 }
 
@@ -71,13 +80,11 @@ a:hover {
   background-color: whitesmoke;
 }
 
-body {
-  background-image: url(/images/photo-1585002640812-f164768c4435.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 20px;
-  
+button:hover {
+  color:  rgba(206, 28, 28, 0.872);
+  background-color: whitesmoke;
 }
+
 
 footer{
   width: 100%;
@@ -90,14 +97,43 @@ footer{
 
 /*LOGIN - SIGNUP*/
 
+form{
+  margin-top: 55px;
+  font-family: 'Baloo Da 2', cursive;
+  font-size: 20px;
+  display:block;
+  text-align: center;
+}
 
+form input[type="text"],form input[type="password"]{
+  font-family: 'Baloo Da 2', cursive;
+  font-size: 20px;
+  text-decoration:none;
+  text-align: center;
+  color: black;
+  margin:10px;
+  padding: 3px;
+  align-items: center;
+}
 
+.nextpage{
+  font-family: 'Baloo Da 2', cursive;
+  font-size: 20px;
+  text-decoration:none;
+  text-align: center;
+  color: whitesmoke;
+  margin:10px;
+  padding: 3px;
+  align-items: center;
+  margin-top: 65px;
+  background-color: rgba(206, 28, 28, 0.872);
+  filter: drop-shadow(5px 5px 10px black);
 
+}
 
+/*PROFILE-OTHER PROFILES*/
 
-
-
-
+ 
 
 
 

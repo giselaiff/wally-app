@@ -1,18 +1,21 @@
+<h1>Edit your profile</h1>
+
 <form action="/profile/{{profileData._id}}" method="post">
   <label for="name">Name</label>
   <input type="text" name="username" id="user-name" placeholder="name" value="{{profileData.username}}">
-
+<br>
   <label for="age">Age</label>
   <input type="text" name="age" id="user-age" placeholder="age" value="{{profileData.age}}">
-
+<br>
   <label for="description">About me</label>
   <input type="text" name="description" id="user-description" value="{{profileData.description}}">
-
+<br>
   <label for="city">City</label>
   <input type="text" name="city" id="user-city" placeholder="city" value="{{profileData.city}}">
-
+<br>
   <label for="mood">Mood</label>
   <input type="text" name="mood" id="user-mood" placeholder="Chill/Medium/Hard" value="{{profileData.mood}}">
-
+<br>
   <button type="submit">submit</button>
 </form>
+

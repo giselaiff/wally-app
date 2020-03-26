@@ -1,15 +1,21 @@
-<h2>Log in</h2>
+<h1>Log in</h1>
+
 <form id="form" action="/login" method="POST">
   <label for="username">Username</label><br>
   <input type="text" name="username" placeholder="Your username">
-
+<br>
   <label for="password">Password</label><br>
   <input type="password" name="password" placeholder="********">
-
-  <button type="submit">Enter</button>
-  {{#if error}}
+<br>
+{{#if error}}
   {{error}}
   {{/if}}
+  <br>
+  <button class="nextpage" type="submit">Enter</button>
+
+  
 </form>
 
-<a href='./'>Back</a>
+<nav >
+<a href='./signup' class="button">Signup</a>
+</nav>

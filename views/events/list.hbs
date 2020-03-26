@@ -3,7 +3,9 @@
 {{#if info}}
 {{info}}
 {{/if}}
-<a href="/profile/{{currentUser._id}}">My Profile</a>
+<nav >
+<a href="/profile/{{currentUser._id}}" class="button">My Profile</a>
+</nav>
 <ul>
   {{#each events }}
   <li>
@@ -12,5 +14,9 @@
   </li>
   {{/each}}
 </ul>
-<a href="/events/add">create an event</a>
-<a href="/logout">logout</a>
+
+<nav >
+<a href="/events/add"class="button">create an event</a>
+<a href="/logout"class="button">logout</a>
+
+</nav>
