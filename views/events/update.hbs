@@ -5,10 +5,16 @@
   <input type="text" name="description" id="event-description" value="{{event.description}}">
   <label for="hour">hour</label>
   <input type="text" name="hour" id="event-hour" value="{{event.hour}}">
+   <label for="date">date</label>
+  <input type="date" name="date" id="event-date" value="{{event.date}}">
   <label for="location">location</label>
   <input type="text" name="location" id="event-location" value="{{event.location}}">
-   <label for="mood">mood</label>
-  <input type="text" name="mood" id="event-mood" placeholder="Chill/Medium/Hard" value="{{event.mood}}">
+   <label for="mood">Choose a mood:</label> 
+  <select id="mood" name="mood">
+    <option value="Chill">Chill</option>
+    <option value="Medium">Medium</option>
+    <option value="Hard">Hard</option>
+  </select>
   
   <button type="submit">submit</button>
 </form>

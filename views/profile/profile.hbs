@@ -19,7 +19,18 @@
       <button type="submit">Delete</button>
     </form>
 
+
 {{/if}}
+
+
+<ul class="event-list-profile">
+  {{#each myEvents }}
+  <li>
+    <a href="/events/{{this._id}}">{{ this.name }}</a>
+  </li>
+  {{/each}}
+</ul>
+
 <a href="/logout">logout</a>
 
 <a href="/events">Back</a>

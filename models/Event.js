@@ -22,7 +22,12 @@ const eventSchema = new Schema({
         hour: {
             type: Number,
             required: true,
-		},
+        },
+        
+        date: {
+            type: Date,
+            required: true,
+        },
 
     	location: {
             type: String,

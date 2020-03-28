@@ -16,7 +16,7 @@ router.get('/add', middleware.checkIfUserLoggedIn, (req, res, next) => {
 //POST events/:id
 
 router.post('/add', (req, res, next) => {
-    const { name, description, hour, location, mood } = req.body;
+    const { name, description, hour, date, location, mood } = req.body;
     const userId = req.session.currentUser._id
     Event.create({
         userId,
@@ -24,6 +24,7 @@ router.post('/add', (req, res, next) => {
 		description,
         hour,
         location,
+        date,
         mood,
 	})
 		.then(() => {
@@ -66,7 +67,7 @@ router.get('/', (req, res, next) => {
     }
 });
 
-// POST see one event:  /event/:id
+// GET see one event:  /event/:id
 
 router.get('/:id', (req, res, next) => {
 
@@ -85,6 +86,7 @@ router.get('/:id', (req, res, next) => {
                     isJoined = false;
                 }
             })
+           
             res.render('events/singleEvent', {eventData: singleEvent, isOwner, isJoined})
         })
         .catch(next);
@@ -106,9 +108,9 @@ router.get('/:id/update', (req, res, next) => {
 router.post('/:id', (req, res, next) => {
     const { id } = req.params;
 
-    const {name, description, hour, location, mood} = req.body;
+    const {name, description, hour, location, date, mood} = req.body;
     
-    Event.update({ _id : id }, { $set: { name, description, hour, location, mood }})
+    Event.update({ _id : id }, { $set: { name, description, hour, date, location, mood }})
     .then(() => {
         res.redirect(`/events/${id}`);
     })

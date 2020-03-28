@@ -34,6 +34,8 @@ const userSchema = new Schema(
         type: String, 
         enum:["Chill", "Medium", "Hard"]
 	},
+
+
 });
 
 const User = mongoose.model('User', userSchema);

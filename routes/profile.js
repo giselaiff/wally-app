@@ -3,9 +3,10 @@ const middleware = require('../helpers/authMiddleware');
 
 const router = express.Router();
 const User = require('../models/User');
+const Event = require('../models/Event');
 
 
-// get /profile/:id
+// GET /profile/:id
 // hacer comprobación :id === session.currentUser -> enseñar el boton
 router.get('/:id', middleware.checkIfUserLoggedIn, (req, res, next) => {
     const paramUserId = req.params.id;
@@ -17,7 +18,12 @@ router.get('/:id', middleware.checkIfUserLoggedIn, (req, res, next) => {
         }else{
             isOwner = false
         }
-        res.render('profile/profile' , {currentUser: modifyProfile, isOwner: isOwner})
+
+        Event.find( {joined: modifyProfile._id} )
+        .then(myEvents => {
+            console.log(myEvents)
+            res.render('profile/profile' , {currentUser: modifyProfile, isOwner: isOwner, myEvents})
+        })
     })  
     .catch(next);
 });
