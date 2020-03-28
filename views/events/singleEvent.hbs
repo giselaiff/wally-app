@@ -1,6 +1,9 @@
 <div class="container-individual-Event">
-    <div class="image-event">
-        <img src="{{eventData.image}}" alt="image-event">
+    
+    <h1>{{eventData.name}}</h1>
+
+    <div class="image-event">        
+        <img src="{{eventData.image}}"class="eventsimg">
     </div>
     <div class="data-event">
         <h1>{{eventData.name}}</h1>
@@ -13,11 +16,11 @@
 
     {{#if isJoined}}
         <form action="/events/{{eventData._id}}/unjoin" method="post">
-            <button type="submit">Unjoin</button>
+            <button type="submit"class="nextpage">Unjoin</button>
         </form>
         {{else}}
             <form action="/events/{{eventData._id}}/join" method="post">
-                <button type="submit">Join</button>
+                <button type="submit" class="nextpage" >Join</button>
             </form>
     {{/if}}
 
@@ -30,16 +33,13 @@
         </ul>
 
 
-        <a href="/events">Go back</a>
+        <a href="/events"class="button">Go back</a>
 
 
         {{#if isOwner}}
-            <div id="updateBtn">
-                <a href="/events/{{eventData._id}}/update">Update</a>
-            </div>
+                <a href="/events/{{eventData._id}}/update"class="button">Update</a>
             <form action="/events/{{eventData._id}}/delete" method="post">
-                <button type="submit">delete</button>
+                <button type="submit" class="nextpage">Delete</button>
             </form>
         {{/if}}
-    </div>
 </div>

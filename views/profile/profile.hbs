@@ -4,23 +4,25 @@
     </div>
 <div class="profile-content">
     <div class="profile-information">
-        <h2>{{currentUser.username}}</h2>
-        <h2>{{currentUser.age}}</h2>
-        <h2>{{currentUser.description}}</h2>
-        <h2>{{currentUser.city}}</h2>
-        <h2>{{currentUser.mood}}</h2>
+        <h3>I'm {{currentUser.username}}</h3>
+        <h3>Age: <br>{{currentUser.age}}</h3>
+        <h3>About me: <br>{{currentUser.description}}</h3>
+        <h3>City: <br>{{currentUser.city}}</h3>
+        <h3>Mood: <br>{{currentUser.mood}}</h3>
 
     </div>
 {{#if isOwner}}
+<nav >
 <div class="profile-modifications">
-<a href="/profile/{{currentUser._id}}/edit">Edit</a>
+<a href="/profile/{{currentUser._id}}/edit"class="button">Edit</a>
 </div>
   <form action="/profile/{{currentUser._id}}/delete" method="post">
-      <button type="submit">Delete</button>
+      <button class="nextpage" type="submit">Delete account</button>
     </form>
 
 
 {{/if}}
+<<<<<<< HEAD
 
 
 <ul class="event-list-profile">
@@ -34,5 +36,10 @@
 <a href="/logout">logout</a>
 
 <a href="/events">Back</a>
+=======
+<a href="/logout" class="button">Logout</a>
+>>>>>>> css
 
+<a href="/events" class="button">Back</a>
+</nav>
 
