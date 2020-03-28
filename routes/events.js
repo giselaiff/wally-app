@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+const moment = require('moment');
 const middleware = require('../helpers/authMiddleware');
 const Event = require('../models/Event');
 const User = require('../models/User');
@@ -17,7 +18,8 @@ router.get('/add', middleware.checkIfUserLoggedIn, (req, res, next) => {
 
 router.post('/add', (req, res, next) => {
     const { name, description, hour, date, location, mood } = req.body;
-    const userId = req.session.currentUser._id
+    const userId = req.session.currentUser._id;
+    
     Event.create({
         userId,
 		name,
@@ -73,11 +75,13 @@ router.get('/:id', (req, res, next) => {
 
     const paramEventId = req.params.id;
 
+
     Event.findOne({_id: paramEventId})
         .populate("joined")
         .then (singleEvent => {
             const isOwner = singleEvent.userId == req.session.currentUser._id;
             let isJoined;
+            const momentDate = moment(singleEvent.date).format("Do MMM YYYY")
             singleEvent.joined.forEach((user) => {
                 if (user._id == req.session.currentUser._id){
                     isJoined = true;
@@ -87,7 +91,7 @@ router.get('/:id', (req, res, next) => {
                 }
             })
            
-            res.render('events/singleEvent', {eventData: singleEvent, isOwner, isJoined})
+            res.render('events/singleEvent', {eventData: singleEvent, momentDate, isOwner, isJoined})
         })
         .catch(next);
 });
