@@ -19,7 +19,9 @@ router.get('/add', middleware.checkIfUserLoggedIn, (req, res, next) => {
 router.post('/add', (req, res, next) => {
     const { name, description, hour, date, location, mood } = req.body;
     const userId = req.session.currentUser._id;
-    
+    if (name === '' || description === '' || hour === '' || date === '' || location === '' || mood === '') {
+        res.render('events/create', { error: 'Upss! The fields are empty' });
+	} else {
     Event.create({
         userId,
 		name,
@@ -32,13 +34,14 @@ router.post('/add', (req, res, next) => {
 		.then(() => {
 			res.redirect('/events');
 		})
-		.catch(next);
+        .catch(next);
+    }
 });
 
 
 //GET all events: /events
 
-router.get('/', (req, res, next) => {
+router.get('/', middleware.checkIfUserLoggedIn, (req, res, next) => {
     const { currentUser } = req.session;
     const { mood } = currentUser;
     let moodToFind;
@@ -71,7 +74,7 @@ router.get('/', (req, res, next) => {
 
 // GET see one event:  /event/:id
 
-router.get('/:id', (req, res, next) => {
+router.get('/:id', middleware.checkIfUserLoggedIn, (req, res, next) => {
 
     const paramEventId = req.params.id;
 
@@ -98,7 +101,7 @@ router.get('/:id', (req, res, next) => {
 
 //GET Update event info:  /event/:id/update
 
-router.get('/:id/update', (req, res, next) => {
+router.get('/:id/update', middleware.checkIfUserLoggedIn, (req, res, next) => {
     Event.findById(req.params.id)
         .then(event => {
             res.render('events/update', { event });
@@ -113,13 +116,15 @@ router.post('/:id', (req, res, next) => {
     const { id } = req.params;
 
     const {name, description, hour, location, date, mood} = req.body;
-    
+    if (name === '' || description === '' || hour === '' || date === '' || location === '' || mood === '') {
+        res.render('events/update', { error: 'Upss! The fields are empty' });
+	} else {
     Event.update({ _id : id }, { $set: { name, description, hour, date, location, mood }})
     .then(() => {
         res.redirect(`/events/${id}`);
     })
     .catch(next);
-
+    }
 });
 
 
