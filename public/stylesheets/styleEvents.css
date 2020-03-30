@@ -13,6 +13,14 @@ body {
   margin-top: 5px;
 }
 
+h2{
+  font-family: 'Baloo Da 2', cursive;
+  font-size: 20px;
+  display:block;
+  text-align: center;
+  background-size: 100%;
+  margin-top: 40px;
+}
 
 .back-button{
     visibility: hidden;
