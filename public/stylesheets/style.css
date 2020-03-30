@@ -3,10 +3,11 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap');
 
 body {
-  background-image: url(/images/redline.png);
+  /*background-image: url(/images/redline.png);
   background-repeat: no-repeat;
   background-size: cover;  
-  margin: 30px;
+  margin: 30px;*/
+  background-color: white;
 }
 
 .logoname {
@@ -110,7 +111,7 @@ form input[type="text"],form input[type="password"]{
   align-items: center;
 }
 
-.nextpage{
+.button-next{
   font-family: 'Baloo Da 2', cursive;
   font-size: 20px;
   text-decoration:none;
@@ -180,4 +181,38 @@ li{
 a{
   text-decoration: none;
   color: black;
+}
+
+/*Rak*/
+
+.singleEvent-style{
+  color: black;
+  font-size: 14px;
+  font-family: 'Baloo Da 2', cursive;
+  justify-content: left;
+  font-weight: bolder;
+  margin: 0;
+}
+
+.event-name{
+  color: rgb(194, 37, 37);
+  font-size: 20px;
+  font-family: 'Liu Jian Mao Cao', cursive;
+  margin-top: 20px;
+  text-align: start;
+}
+
+.container-data-event{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px;
+}
+
+.singleEvent-style-description{
+  font-size: 14px;
+  color: black;
+  font-family: 'Baloo Da 2', cursive;
+  justify-content: left;
+  text-align: justify;
 }

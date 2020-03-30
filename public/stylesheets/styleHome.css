@@ -26,8 +26,8 @@ body {
     background-image: url(https://media.giphy.com/media/gCxGeZAimDeXm/giphy.gif);
     background-size: cover;
     color: transparent;
-    -moz-background-clip: text;
-    -webkit-background-clip: text;
+    /*-moz-background-clip: text;
+    -webkit-background-clip: text;*/
     font-size: 120px;
     margin: 10px 0;
     font-family: 'Liu Jian Mao Cao', cursive;

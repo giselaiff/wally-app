@@ -1,32 +1,31 @@
 <div class="container-individual-Event">
     
-    <h1>{{eventData.name}}</h1>
 
     <div class="image-event">        
         <img src="{{eventData.image}}"class="eventsimg">
     </div>
-    <div class="data-event">
-        <h1>{{eventData.name}}</h1>
-        <h2>{{eventData.description}}</h2>
-        <h2>{{eventData.hour}}</h2>
-        <h2>{{eventData.location}}</h2>
-        <h2>{{momentDate}}</h2>
-        <h2>{{eventData.mood}}</h2>
+    <div class="container-data-event">
+        <h1 class="event-name">{{eventData.name}}</h1>
+        <p class="singleEvent-style-description">{{eventData.description}}</p>
+        <p class="singleEvent-style" class="singleEvent-style-mood">Mood del evento: {{eventData.mood}}</p>
+        <p class="singleEvent-style" class="singleEvent-style-location">Lugar: {{eventData.location}}</p>
+        <p class="singleEvent-style" class="singleEvent-style-date">Fecha: {{momentDate}}</p>
+        <p class="singleEvent-style" class="singleEvent-style-hour">Hora: {{eventData.hour}}h</p>
 
 
     {{#if isJoined}}
         <form action="/events/{{eventData._id}}/unjoin" method="post">
-            <button type="submit"class="nextpage">Unjoin</button>
+            <button type="submit"class="button-next">Disjoin</button>
         </form>
         {{else}}
             <form action="/events/{{eventData._id}}/join" method="post">
-                <button type="submit" class="nextpage" >Join</button>
+                <button type="submit" class="button-next"></button>Join</button>
             </form>
     {{/if}}
 
         {{!-- FOREACH DEL ARRAY JOIN --}}
 
-        <ul class= "join_list">
+        <ul class= "join-list">
             {{#each eventData.joined}}
             <li> <a href="/profile/{{this._id}}">{{this.username}}</a></li>
             {{/each}}
