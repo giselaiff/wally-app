@@ -12,6 +12,21 @@ h1 {
   color:  rgba(206, 28, 28, 0.872);
 }
 
+.back-button{
+  text-decoration: none;
+  color: rgba(206, 28, 28, 0.872);
+  font-size: 20px;
+  border: 2px solid rgba(206, 28, 28, 0.872);
+  padding: -3px;
+  font-family: 'Baloo Da 2', cursive;
+  text-align: center;
+  display:block; 
+  margin-top: 5px;
+  filter: drop-shadow(5px 5px 12px black);
+  border-radius: 50%;
+  width: 35px;
+}
+
 a{
   text-decoration: none;
   color:  rgba(206, 28, 28, 0.872);
