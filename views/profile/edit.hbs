@@ -1,8 +1,9 @@
 <link rel='stylesheet' href='/stylesheets/style.css' >
 
+<form action="/profile/{{profileData._id}}" method="post">
 
 <div class="container-individual-profile">
-    
+
 <h1 class="profile-title">Edit your profile</h1>
 <div class="image-user">
          <img src="{{!--{{currentUser.image}}--}}/images/perfil.png" alt="image-profile"> 
@@ -16,15 +17,12 @@
     <option value="Chill">Chill</option>
     <option value="Medium">Medium</option>
     <option value="Hard">Hard</option>
-  </select></h3> 
-  </div>
-  <div>
-<h3>About me:<br><input type="text" name="description" id="user-description"placeholder="About me" value="{{profileData.description}}"><br></h3>
+  </select><br></h3> 
+        <h3>About me:<br><input type="text" name="description" id="user-description"placeholder="About me" value="{{profileData.description}}"><br></h3>
   </div>
 
   <button type="submit"class="button-next">Submit</button>
 
-</nav>
 </form>
 
   
