@@ -139,9 +139,10 @@ form input{
   color: black;  
   padding: 3px;
   border-color: rgba(206, 28, 28, 0.872);
-
+}
   /*Rak*/
 
+ 
 .singleEvent-style{
   color: black;
   font-size: 14px;
@@ -149,7 +150,8 @@ form input{
   justify-content: left;
   font-weight: bolder;
   margin: 0;
-}  
+
+}
 
 
 .event-name{
@@ -173,4 +175,46 @@ form input{
   font-family: 'Baloo Da 2', cursive;
   justify-content: left;
   text-align: justify;
+}
+.singleEventImg{
+  width: 100%;
+  margin-top: 20px;
+}
+
+.button-join{
+  font-family: 'Baloo Da 2', cursive;
+  font-size: 16px;
+  text-align: center;
+  margin-left: 38%;
+  background-color: rgba(206, 28, 28, 0.872);
+  color: whitesmoke;
+  margin-top: -30px;
+  width: 80px;
+  font-weight: bolder;
+  margin-top: 20px;
+  
+}
+.join-list{
+  font-family: 'Baloo Da 2', cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.container-buttonEvent-update-delete{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 60px;
+
+
+}
+.button-updateDelete-event{
+  font-family: 'Baloo Da 2', cursive;
+  font-size: 14px;
+  color: whitesmoke;
+  background-color: rgba(206, 28, 28, 0.872);
+  filter: drop-shadow(5px 5px 10px black);
+  border: none;
+  padding: 5px 25px;
 }

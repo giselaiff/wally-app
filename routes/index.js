@@ -33,7 +33,7 @@ router.post('/signup', (req, res, next) => {
 					})
 						.then(userCreated => {
 							req.session.currentUser = userCreated;
-							res.redirect('/events');
+							res.redirect('/mood');
 						})
 						.catch(error => {
 							console.log('error', error);
