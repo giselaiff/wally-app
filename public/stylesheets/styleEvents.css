@@ -13,6 +13,14 @@ body {
   margin-top: 5px;
 }
 
+h2{
+  font-family: 'Baloo Da 2', cursive;
+  font-size: 20px;
+  display:block;
+  text-align: center;
+  background-size: 100%;
+  margin-top: 40px;
+}
 
 .back-button{
     visibility: hidden;
@@ -25,18 +33,17 @@ h3{
     font-size: 20px;
   }
   
-  ul{
+  .eventimg-list ul{
     padding: 5px;
   }
   
-  li{
+  .eventimg-list li{
     font-family: 'Baloo Da 2', cursive;
     font-size: 20px;
     display:block;
     text-align: center;
     background-size: 100%;
     margin-top: 40px;
-  
   }
   
   .buttonadd{
@@ -114,3 +121,9 @@ h3{
     color: black;
     font-size: 14px;
   } 
+
+
+#menu ul {
+  display: flex;
+  }
+
