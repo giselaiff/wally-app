@@ -1,6 +1,11 @@
 <link rel='stylesheet' href='/stylesheets/styleEvents.css' >
 <img class="logoname" src="/images/wallyname.png">
 
+<ul id="menu">
+<li><a href="/profile/{{currentUser._id}}" class="button-menu">My Profile</a></li>
+<li><a href="/events"class="button-menu">Events</a></li>
+<li><a href="/"class="button-menu">Logout</a></li>
+</ul>
 
 <h2>
 {{#if info}}
@@ -8,11 +13,13 @@
 {{/if}}
 </h2>
 
-{{!-- <a href="/profile/{{currentUser._id}}">My Profile: /profile/{{currentUser._id}}</a> --}}
-<nav >
-<a href="/profile/{{currentUser._id}}" class="button">My Profile</a>
-</nav>
 
+{{!-- <a href="/profile/{{currentUser._id}}">My Profile: /profile/{{currentUser._id}}</a> --}}
+
+</div>
+
+
+<div class="eventimg-list">
 <ul>
   {{#each events }}
   <li>
@@ -20,6 +27,7 @@
   </li>
   {{/each}}
 </ul>
-
+</div>
 
 <a href="/events/add"class="buttonadd">+</a>
+

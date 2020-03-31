@@ -53,6 +53,62 @@ a{
   margin-top: -180px;
 }
 
+.back-button{
+  text-decoration: none;
+  color: rgba(206, 28, 28, 0.872);
+  font-size: 20px;
+  border: 2px solid rgba(206, 28, 28, 0.872);
+  padding: -3px;
+  font-family: 'Baloo Da 2', cursive;
+  text-align: center;
+  display:block; 
+  margin-top: 5px;
+  filter: drop-shadow(5px 5px 12px black);
+  border-radius: 50%;
+  width: 35px;
+}
+
+a{
+  text-decoration: none;
+  color:  rgba(206, 28, 28, 0.872);
+  font-size: 20px;
+} 
+
+.image-user{  
+    width: 40%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    display: block;;;
+}
+
+.profile-information{
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  right: -150px; 
+  bottom: 200px; 
+  width: 50%;
+
+}
+.event-list{
+  width: 40%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  margin-top: -210px;
+}
+.event-list-profile{
+  width: 40%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  margin-top: -180px;
+}
+
 .name-event{
   font-size: 10px;
   font-family: 'Baloo Da 2', cursive;
@@ -84,7 +140,79 @@ h3{
   margin-left: 105px;
 }
 
-.nextpage{
+.button-next{
+  font-family: 'Baloo Da 2', cursive;
+  font-size: 14px;
+  text-decoration:none;
+  text-align: center;
+  color: whitesmoke;
+  align-items: center;
+  background-color: rgba(206, 28, 28, 0.872);
+  filter: drop-shadow(5px 5px 10px black);
+  margin-left: 120px;
+  margin-top: 20px;
+}
+a:hover {
+  color:  rgba(206, 28, 28, 0.872);
+  background-color: whitesmoke;
+}
+
+.name-event{
+  font-size: 10px;
+  font-family: 'Baloo Da 2', cursive;
+  color: black; 
+}
+
+li{
+  display:block;
+  margin-left: -40px;
+
+}
+
+h3{
+  font-size: 10px;
+  font-family: 'Baloo Da 2', cursive;
+  color: black;
+}
+.delete-acc{
+  font-family: 'Baloo Da 2', cursive;
+  font-size: 14px;
+  text-decoration:none;
+  text-align: center;
+  color: whitesmoke;
+  margin:5px;
+  padding: 3px;
+  align-items: center;
+  background-color: rgba(206, 28, 28, 0.872);
+  filter: drop-shadow(5px 5px 10px black);
+  margin-left: 105px;
+.button{
+  font-family: 'Baloo Da 2', cursive;
+  font-size: 14px;
+  text-decoration:none;
+  text-align: center;
+  color: whitesmoke;
+  padding: 3px;
+  display:block;
+  margin-top: 3px;
+  background-color: rgba(206, 28, 28, 0.872);
+  max-width: 200px;
+  max-height: 200px;
+  margin:10px auto;
+  filter: drop-shadow(5px 5px 10px black);
+  margin-top: -30px;
+}
+
+select{
+  font-family: 'Baloo Da 2', cursive;
+  font-size: 14px;
+  text-decoration:none;
+  color: black;
+  background-color: whitesmoke;
+  border-color: rgba(206, 28, 28, 0.872);
+}
+
+form input{
   font-family: 'Baloo Da 2', cursive;
   font-size: 14px;
   text-decoration:none;
@@ -139,4 +267,41 @@ form input{
   color: black;  
   padding: 3px;
   border-color: rgba(206, 28, 28, 0.872);
+  color: black;  
+  padding: 3px;
+  border-color: rgba(206, 28, 28, 0.872);
+
+  /*Rak*/
+
+.singleEvent-style{
+  color: black;
+  font-size: 14px;
+  font-family: 'Baloo Da 2', cursive;
+  justify-content: left;
+  font-weight: bolder;
+  margin: 0;
+}  
+
+
+.event-name{
+  color: rgb(194, 37, 37);
+  font-size: 20px;
+  font-family: 'Liu Jian Mao Cao', cursive;
+  margin-top: 20px;
+  text-align: start;
+}
+
+.container-data-event{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px;
+}
+
+.singleEvent-style-description{
+  font-size: 14px;
+  color: black;
+  font-family: 'Baloo Da 2', cursive;
+  justify-content: left;
+  text-align: justify;
 }
