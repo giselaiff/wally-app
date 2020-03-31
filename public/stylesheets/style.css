@@ -158,12 +158,17 @@ form input{
 }
 
 .container-data-profile{
-  height: 200px;
+  height: 300px;
   overflow: hidden;
   position: relative;
   display: block;
   margin-left: 150px;
   margin-top: -210px;
+}
+
+.about-me{
+  margin-top: -70px;
+
 }
   /*Rak*/
 
