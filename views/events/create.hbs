@@ -1,26 +1,34 @@
 
 {{!-- action to route post --}}
+<h1>Create an event</h1>
+
 <form action="/events/add" method="post">
-  <label for="name">name</label>
-  <input type="text" name="name" id="event-name" placeholder="name">
-  <label for="description">description</label>
-  <input type="text" name="description" id="event-description">
-  <label for="hour" >hour</label>
-  <input type="text" placeholder="00:00" name="hour" id="event-hour">
-  <label for="date">date</label>
-  <input type="date" name="date"  id="event-date">
-  <label for="location">location</label>
-  <input type="text" name="location" id="event-location">
-  <label for="mood">Choose a mood:</label> 
-  <select id="mood" name="mood">
+ <div class="image-event">        
+    <img src="{{!-- {{eventData.image}} --}}/images/eventPaseoPlaya.jpg" class="eventsimg singleEventImg">
+  </div>
+<div class="container-data-event">
+<label class="label-create-event" for="name">Tilte</label>
+  <input class="form-create-event-name" type="text" name="name" id="form-create-event"><br>
+  <label class="label-create-event" for="description">Description</label>
+  <input class="form-create-event-dscription" type="text" name="description" id="form-create-event"><br>
+  <label class="label-create-event" for="date">Date</label>
+  <input class="form-create-event-date" type="date" name="date"  id="form-create-event"><br>
+  <label class="label-create-event" for="location">Location</label>
+  <input class="form-create-event-location" type="text" name="location" id="form-create-event"><br>
+  <label class="label-create-event" for="hour" >Hour</label>
+  <input class="form-create-event-hour" type="text" placeholder="00:00" name="hour" id="form-create-event"><br>
+  <label class="label-create-event" for="mood">Choose a mood:</label> 
+  <select class="form-create-event-mood" name="mood" id="form-create-event">
     <option value="Chill">Chill</option>
     <option value="Medium">Medium</option>
     <option value="Hard">Hard</option>
-  </select>
+  </select><br>
   <br>
   {{#if error}}
   {{error}}
   {{/if}}
   <br>
-<button type="submit"class="nextpage">Submit</button>
+</div>
+  
+<button type="submit"class="button-submit-create-event">Submit</button>
 </form>
