@@ -1,5 +1,6 @@
-<form action="/events/{{event.id}}" method="post">
-  <label for="name">name</label>
+<h1>Edit event</h1>
+{{!-- <form action="/events/{{event.id}}" method="post">
+  
   <input type="text" name="name" id="event-name" placeholder="name" value="{{event.name}}">
   <label for="description">description</label>
   <input type="text" name="description" id="event-description" value="{{event.description}}">
@@ -21,4 +22,36 @@
   {{/if}}
   <br>
   <button type="submit"class="nextpage">Submit</button>
+  <h3 class="singleEvent-style">Description:
+</form> --}}
+
+
+<form action="/events/{{event.id}}" method="post">
+
+  <div class="image-event">        
+    <img src="{{!-- {{eventData.image}} --}}/images/eventPaseoPlaya.jpg" class="eventsimg singleEventImg">
+  </div>
+  <div class="container-data-event">
+    <label class="label-update-event" for="name">Title:</label>
+    <input class="form-update-event-name" type="text" name="name" id="form-update-event" placeholder="name" value="{{event.name}}"></h3><br>
+    <label class="label-update-event" for="description">Description:</label>
+    <input class="form-update-event-description" type="text" name="description" id="form-update-event" value="{{event.description}}"><br>
+     <label class="label-update-event" for="location">Location</label>
+    <input class="form-update-event-location" type="text" name="location" id="form-update-event" value="{{event.location}}"></h3><br>
+    <label class="label-update-event" for="date">Date</label>
+    <input class="form-update-event-date" type="date" name="date" id="form-update-event" value="{{event.date}}"></h3><br>
+    <label class="label-update-event"for="hour">Hour:</label>
+    <input class="form-update-event-hour" type="text" name="hour" id="form-update-event" value="{{event.hour}}"</h3><br>
+    <label class="label-update-event" for="mood">Mood:</label>
+    <select class="form-update-event-mood" id="form-update-event" name="mood">
+      <option value="Chill">Chill</option>
+      <option value="Medium">Medium</option>
+      <option value="Hard">Hard</option>
+    </select><br>
+  </div>
+  <div>
+    <form action="/events/{{event._id}}/delete" onclick="return confirm('Are you sure you want to delete this event?');" method="post">
+      <button type="submit" class="button-submit-update">Submit</button>
+    </form>
+  </div> 
 </form>
