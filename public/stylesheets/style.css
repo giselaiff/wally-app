@@ -12,47 +12,6 @@ h1 {
   color:  rgba(206, 28, 28, 0.872);
 }
 
-a{
-  text-decoration: none;
-  color:  rgba(206, 28, 28, 0.872);
-  font-size: 20px;
-} 
-
-.image-user{  
-    width: 40%;
-    height: 200px;
-    overflow: hidden;
-    position: relative;
-    display: block;;;
-}
-
-.profile-information{
-  height: 200px;
-  overflow: hidden;
-  position: relative;
-  display: block;
-  right: -150px; 
-  bottom: 200px; 
-  width: 50%;
-
-}
-.event-list{
-  width: 40%;
-  height: 200px;
-  overflow: hidden;
-  position: relative;
-  display: block;
-  margin-top: -210px;
-}
-.event-list-profile{
-  width: 40%;
-  height: 200px;
-  overflow: hidden;
-  position: relative;
-  display: block;
-  margin-top: -180px;
-}
-
 .back-button{
   text-decoration: none;
   color: rgba(206, 28, 28, 0.872);
@@ -157,78 +116,6 @@ a:hover {
   background-color: whitesmoke;
 }
 
-.name-event{
-  font-size: 10px;
-  font-family: 'Baloo Da 2', cursive;
-  color: black; 
-}
-
-li{
-  display:block;
-  margin-left: -40px;
-
-}
-
-h3{
-  font-size: 10px;
-  font-family: 'Baloo Da 2', cursive;
-  color: black;
-}
-.delete-acc{
-  font-family: 'Baloo Da 2', cursive;
-  font-size: 14px;
-  text-decoration:none;
-  text-align: center;
-  color: whitesmoke;
-  margin:5px;
-  padding: 3px;
-  align-items: center;
-  background-color: rgba(206, 28, 28, 0.872);
-  filter: drop-shadow(5px 5px 10px black);
-  margin-left: 105px;
-.button{
-  font-family: 'Baloo Da 2', cursive;
-  font-size: 14px;
-  text-decoration:none;
-  text-align: center;
-  color: whitesmoke;
-  padding: 3px;
-  display:block;
-  margin-top: 3px;
-  background-color: rgba(206, 28, 28, 0.872);
-  max-width: 200px;
-  max-height: 200px;
-  margin:10px auto;
-  filter: drop-shadow(5px 5px 10px black);
-  margin-top: -30px;
-}
-
-select{
-  font-family: 'Baloo Da 2', cursive;
-  font-size: 14px;
-  text-decoration:none;
-  color: black;
-  background-color: whitesmoke;
-  border-color: rgba(206, 28, 28, 0.872);
-}
-
-form input{
-  font-family: 'Baloo Da 2', cursive;
-  font-size: 14px;
-  text-decoration:none;
-  text-align: center;
-  color: whitesmoke;
-  align-items: center;
-  background-color: rgba(206, 28, 28, 0.872);
-  filter: drop-shadow(5px 5px 10px black);
-  margin-left: 120px;
-  margin-top: 20px;
-}
-a:hover {
-  color:  rgba(206, 28, 28, 0.872);
-  background-color: whitesmoke;
-}
-
 button:hover {
   color:  rgba(206, 28, 28, 0.872);
   background-color: whitesmoke;
@@ -267,10 +154,6 @@ form input{
   color: black;  
   padding: 3px;
   border-color: rgba(206, 28, 28, 0.872);
-  color: black;  
-  padding: 3px;
-  border-color: rgba(206, 28, 28, 0.872);
-
 }
   /*Rak*/
 
