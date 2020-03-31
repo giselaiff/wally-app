@@ -11,10 +11,11 @@
         <h3>I'm {{currentUser.username}}</h3>
         <h3>Age: {{currentUser.age}}</h3>
         <h3>City: {{currentUser.city}}</h3>
-        <h3>Mood: {{currentUser.mood}}</h3> 
-        <h3>About me: <br> {{currentUser.description}}</h3>
+        <h3>Mood: {{currentUser.mood}}</h3> <br>
   </div>
-  
+  <div class="about-me">
+          <h3>About me: <br> {{currentUser.description}}</h3>
+</div>
   <h1 class="event-list">Joined events:</h1>
     <ul class="event-list-profile">
   {{#each myEvents }}

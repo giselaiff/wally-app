@@ -58,7 +58,7 @@ a{
   overflow: hidden;
   position: relative;
   display: block;
-  margin-top: 20px;
+  margin-top: 30px;
   font-size: 15px;
 }
 .event-list-profile{
@@ -167,7 +167,10 @@ form input{
 }
 
 .about-me{
-  margin-top: -70px;
+  margin-top: -130px;
+}
+.about-me-edit{
+  margin-top: -90px;
 
 }
   /*Rak*/
