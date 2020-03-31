@@ -1,7 +1,13 @@
-<h3>Welcome {{ currentUser.username }}</h3>
+<link rel='stylesheet' href='/stylesheets/styleEvents.css' >
+<img class="logoname" src="/images/wallyname.png">
+
+
+<h2>
 {{#if info}}
-{{info}}
+{{info}}{{ currentUser.username }}
 {{/if}}
+</h2>
+
 {{!-- <a href="/profile/{{currentUser._id}}">My Profile: /profile/{{currentUser._id}}</a> --}}
 <nav >
 <a href="/profile/{{currentUser._id}}" class="button">My Profile</a>

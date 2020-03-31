@@ -1,25 +1,27 @@
 <h1>Edit your profile</h1>
 <form action="/profile/{{profileData._id}}" method="post">
-  <label for="name">Name</label><br>
+  <label for="name">Name:</label>
   <input type="text" name="username" id="user-name" placeholder="Name" value="{{profileData.username}}"><br>
 <br>
-  <label for="age">Age</label><br>
+  <label for="age">Age:</label>
   <input type="text" name="age" id="user-age" placeholder="Age" value="{{profileData.age}}"><br>
 <br>
-  <label for="description">About me</label><br>
-  <input type="text" name="description" id="user-description"placeholder="About me" value="{{profileData.description}}"><br>
-<br>
-  <label for="city">City</label>
-  <input type="text" name="city" id="user-city" placeholder="city" value="{{profileData.city}}">
+<label for="city">City:</label>
+  <input type="text" name="city" id="user-city" placeholder="City" value="{{profileData.city}}"><br>
 
-  <label for="mood">Choose a mood:</label> 
+<br>
+  <label for="mood">Choose a mood:</label>
   <select id="mood" name="mood">
     <option value="Chill">Chill</option>
     <option value="Medium">Medium</option>
     <option value="Hard">Hard</option>
-  </select>
+  </select><br>
+   <br>
+   <label for="description">About me:</label><br>
+  <input type="text" name="description" id="user-description"placeholder="About me" value="{{profileData.description}}"><br>
+<br>
   
-  <button type="submit"class="nextpage">submit</button>
+  <button type="submit"class="nextpage">Submit</button>
 </form>
 
 

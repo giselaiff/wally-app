@@ -1,13 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap');
+
 body {
     background-image: url(/images/photo-1585002640812-f164768c4435.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 20px;
-    
-    
+    padding: 10px;
+    margin: 30px;
+
   }
 
   .logoname{
+    visibility: hidden;
+  }
+
+  .back-button {
     visibility: hidden;
   }
   
@@ -15,13 +22,39 @@ body {
     color: whitesmoke;
     text-shadow: black 0.1em 0.1em 0.2em;
     font-size: 120px;
-    margin: 10px 0;
     font-family: 'Liu Jian Mao Cao', cursive;
     text-align: center;
-    font-size: 70px;
-    margin-top: 200px;
+    font-size: 60px;
+    margin-top: -20px;
   }
+
+  .logoimg{
+    max-width: 200px;
+    max-height: 200px;
+    margin: auto;
+    display:block;
+    filter: drop-shadow(5px 5px 10px black);
+    margin-top: 30px;
+    opacity: 80%;
+}
   
+.button{
+  font-family: 'Baloo Da 2', cursive;
+  font-size: 14px;
+  text-decoration:none;
+  text-align: center;
+  color: whitesmoke;
+  padding: 3px;
+  display:block;
+  margin-top: 5px;
+  background-color: rgba(206, 28, 28, 0.872);
+  max-width: 200px;
+  max-height: 200px;
+  margin:10px auto;
+  filter: drop-shadow(5px 5px 10px black);
+  margin-top: 20px;
+}
+
   h2{
     background-image: url(https://media.giphy.com/media/gCxGeZAimDeXm/giphy.gif);
     background-size: cover;
@@ -29,9 +62,42 @@ body {
     -moz-background-clip: text;
     -webkit-background-clip: text;
     font-size: 120px;
-    margin: 10px 0;
     font-family: 'Liu Jian Mao Cao', cursive;
     text-align: center;
-    font-size: 70px;
+    font-size: 60px;
     margin-top: 25px;
+  }
+
+  .nextpage{
+    font-family: 'Baloo Da 2', cursive;
+    font-size: 20px;
+    text-decoration:none;
+    text-align: center;
+    color: whitesmoke;
+    margin:10px;
+    padding: 3px;
+    align-items: center;
+    margin-top: 65px;
+    background-color: rgba(206, 28, 28, 0.872);
+    filter: drop-shadow(5px 5px 10px black);
+  
+  }
+  
+  a:hover {
+    color:  rgba(206, 28, 28, 0.872);
+    background-color: whitesmoke;
+  }
+  
+  button:hover {
+    color:  rgba(206, 28, 28, 0.872);
+    background-color: whitesmoke;
+  }
+  
+  footer{
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    margin-top: 60px;
+    color: whitesmoke;
+    text-shadow: black 0.1em 0.1em 0.2em;
   }

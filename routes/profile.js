@@ -7,7 +7,6 @@ const Event = require('../models/Event');
 
 
 // GET /profile/:id
-// hacer comprobación :id === session.currentUser -> enseñar el boton
 router.get('/:id', middleware.checkIfUserLoggedIn, (req, res, next) => {
     const paramUserId = req.params.id;
     User.findOne({_id: paramUserId})
@@ -30,7 +29,7 @@ router.get('/:id', middleware.checkIfUserLoggedIn, (req, res, next) => {
 
 // get  /profile/:id/edit -> mostrar el formulario para modificarlo
 
-router.get('/:id/edit', (req, res, next) => {
+router.get('/:id/edit', middleware.checkIfUserLoggedIn, (req, res, next) => {
     User.findById(req.params.id)
         .then(profileData => {
             res.render('profile/edit', { profileData });
@@ -43,7 +42,6 @@ router.post('/:id', (req, res, next) => {
     const { id } = req.params;
     const {username, age, description, city, mood } = req.body;
     console.log(req);
-    // User.update({ _id : id }, { $set: { username, age, description, city, mood  }})
     User.findByIdAndUpdate(id,{ $set: { username, age, description, city, mood  }},{new: true} )
     .then((user) => {
         req.session.currentUser = {
@@ -59,12 +57,11 @@ router.post('/:id', (req, res, next) => {
 // POST /profile/:id/delete
 router.post('/:id/delete', (req, res, next) => {
 	const { id } = req.params;
-
 	User.findByIdAndDelete(id)
 		.then(() => {
             res.redirect ('/')
 		})
-		.catch(next);
+        .catch(next); 
 });
 
  module.exports = router;

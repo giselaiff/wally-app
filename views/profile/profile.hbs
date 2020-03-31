@@ -1,40 +1,58 @@
+<link rel='stylesheet' href='/stylesheets/style.css' >
+
+
 <h1 class="profile-title">My profile</h1>
 <div class="image-user">
-        <img src="{{currentUser.image}}" alt="image-event">
+         <img src="{{!--{{currentUser.image}}--}}/images/perfil.png" alt="image-profile"> 
     </div>
 <div class="profile-content">
     <div class="profile-information">
         <h3>I'm {{currentUser.username}}</h3>
-        <h3>Age: <br>{{currentUser.age}}</h3>
-        <h3>About me: <br>{{currentUser.description}}</h3>
-        <h3>City: <br>{{currentUser.city}}</h3>
-        <h3>Mood: <br>{{currentUser.mood}}</h3>
+        <h3>Age: {{currentUser.age}}</h3>
+        <h3>City: {{currentUser.city}}</h3>
+        <h3>Mood: {{currentUser.mood}}</h3> 
+        <h3>About me: {{currentUser.description}}</h3>
+  </div>
 
-    </div>
+  <h1 class="event-list">Joined events:</h1>
+    <ul class="event-list-profile">
+  {{#each myEvents }}
+  <li>
+    <a href="/events/{{this._id}}" class="name-event">- {{ this.name }}</a>
+  </li>
+  {{/each}}
+</ul>
+
+
+
 {{#if isOwner}}
 <nav >
 <div class="profile-modifications">
 <a href="/profile/{{currentUser._id}}/edit"class="button">Edit</a>
 </div>
-  <form action="/profile/{{currentUser._id}}/delete" method="post">
-      <button class="nextpage" type="submit">Delete account</button>
-    </form>
+
+<form action="/profile/{{currentUser._id}}/delete" onclick="return confirm('Are you sure you want to delete your account?');" method="post">
+      <button class="delete-acc" type="submit">Delete account</button>
+    </form> 
 
 
 {{/if}}
-
-
-<ul class="event-list-profile">
-  {{#each myEvents }}
-  <li>
-    <a href="/events/{{this._id}}">{{ this.name }}</a>
-  </li>
-  {{/each}}
-</ul>
-
-<a href="/logout"class="button">>logout</a>
-
-
-<a href="/events" class="button">Back</a>
 </nav>
+
+
+
+{{!-- <script>
+function confirmar()
+{
+	if(confirm('¿Are you sure?'))
+		return true;
+	else
+		return false;
+}
+</script>
+<a href="/logout" class="button" onclick="return confirmar()">Logout</a> --}}
+
+
+
+
 

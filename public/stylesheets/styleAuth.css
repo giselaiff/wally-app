@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap');
+
+
+body {
+    background-image: url(/images/redline.png);
+    background-repeat: no-repeat;
+    background-size: cover;  
+    margin: 30px;
+  }
+
+  .logoname {
+    max-width: 200px;
+    max-height: 200px;
+    margin: 10px auto;
+    display:block;
+    margin-top: -70px;
+  }
+  .back-button {
+    visibility: hidden;
+  }
+
+  h1 {
+    color: rgb(194, 37, 37);
+    font-size: 40px;
+    margin: 10px 0;
+    font-family: 'Liu Jian Mao Cao', cursive;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+
+.logoimg{
+    max-width: 200px;
+    max-height: 200px;
+    margin: auto;
+    display:block;
+    filter: drop-shadow(5px 5px 10px black);
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+  
+  
+  .button{
+    font-family: 'Baloo Da 2', cursive;
+    font-size: 14px;
+    text-decoration:none;
+    text-align: center;
+    color: whitesmoke;
+    padding: 3px;
+    display:block;
+    margin-top: 5px;
+    background-color: rgba(206, 28, 28, 0.872);
+    max-width: 200px;
+    max-height: 200px;
+    margin:10px auto;
+    filter: drop-shadow(5px 5px 10px black);
+    margin-top: 20px;
+  }
+  
+  a:hover {
+    color:  rgba(206, 28, 28, 0.872);
+    background-color: whitesmoke;
+  }
+  
+  button:hover {
+    color:  rgba(206, 28, 28, 0.872);
+    background-color: whitesmoke;
+  }
+
+  form{
+    margin-top: 55px;
+    font-family: 'Baloo Da 2', cursive;
+    font-size: 15px;
+    display:block;
+    text-align: center;
+  }
+  
+  form input[type="text"],form input[type="password"]{
+    font-family: 'Baloo Da 2', cursive;
+    font-size: 15px;
+    text-decoration:none;
+    text-align: center;
+    color: black;
+    margin:10px;
+    padding: 3px;
+    align-items: center;
+    border-color: rgba(206, 28, 28, 0.872);
+  }
+  
+  .nextpage{
+    font-family: 'Baloo Da 2', cursive;
+    font-size: 14px;
+    text-decoration:none;
+    text-align: center;
+    color: whitesmoke;
+    margin:10px;
+    padding: 3px;
+    align-items: center;
+    margin-top: 55px;
+    background-color: rgba(206, 28, 28, 0.872);
+    filter: drop-shadow(5px 5px 10px black);
+  
+  }
+
+  select{
+    font-family: 'Baloo Da 2', cursive;
+    font-size: 15px;
+    text-decoration:none;
+    text-align: center;
+    color: black;
+    background-color: whitesmoke;
+    margin:10px;
+    padding: 3px;
+    align-items: center;
+    border-color: rgba(206, 28, 28, 0.872);
+  }
+
+
+  .go-button{
+    font-family: 'Baloo Da 2', cursive;
+    font-size: 15px;
+    text-decoration:none;
+    text-align: center;
+    color: whitesmoke;
+    margin:10px;
+    padding: 3px;
+    align-items: center;
+    margin-top: 200px;
+    background-color: rgba(206, 28, 28, 0.872);
+    filter: drop-shadow(5px 5px 10px black);
+  
+  }
+
+  a{
+    text-decoration: none;
+    color: black;
+  } 
+  

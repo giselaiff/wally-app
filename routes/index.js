@@ -1,5 +1,6 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
+const middleware = require('../helpers/authMiddleware');
 const User = require('../models/User');
 const Event = require('../models/Event');
 
@@ -70,7 +71,6 @@ router.post('/login', (req, res, next) => {
 							username : user.username,
 							_id : user._id,
 						};
-						req.flash('info', 'We missed you!');
 						res.redirect('/mood');
 					} else {
 						req.flash('error', 'Username or password are incorrect');
@@ -87,7 +87,7 @@ router.post('/login', (req, res, next) => {
 //MOODS
 //GET /mood
 
-router.get('/mood', (req, res, next) => {
+router.get('/mood', middleware.checkIfUserLoggedIn, (req, res, next) => {
     res.render('mood');
 });
 
@@ -98,6 +98,7 @@ router.post('/mood', (req, res, next) => {
 	//comparar el mood escogido con el mood del evento
 	//necesito: mood evento y mood usuario
 	let mood= req.body.mood;
+	
 	User.findByIdAndUpdate(req.session.currentUser._id, {mood}, {new: true})
 	.then(user => {
 		req.session.currentUser = {
@@ -105,16 +106,17 @@ router.post('/mood', (req, res, next) => {
 			username : user.username,
 			_id : user._id,
 		};
+	
+		req.flash('info', 'Welcome ');
 		res.redirect('/events'); 
 	})
 	.catch(error => {
-		//notificacion flash
 		next(error);
 	});
 
 });
 
-router.get('/logout', (req, res, next) => {
+router.get('/logout', middleware.checkIfUserLoggedIn, (req, res, next) => {
 	req.session.destroy(err => {
 		if (err) {
 			next(err);
