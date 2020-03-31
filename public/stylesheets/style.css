@@ -29,16 +29,17 @@ h1 {
 
 a{
   text-decoration: none;
-  color:  rgba(206, 28, 28, 0.872);
-  font-size: 20px;
+  color: black;
+  font-size: 14px;
 } 
+
 
 .image-user{  
     width: 40%;
     height: 200px;
     overflow: hidden;
     position: relative;
-    display: block;;;
+    display: block;
 }
 
 .profile-information{
@@ -57,7 +58,8 @@ a{
   overflow: hidden;
   position: relative;
   display: block;
-  margin-top: -210px;
+  margin-top: 20px;
+  font-size: 15px;
 }
 .event-list-profile{
   width: 40%;
@@ -131,9 +133,9 @@ button:hover {
   display:block;
   margin-top: 3px;
   background-color: rgba(206, 28, 28, 0.872);
-  max-width: 200px;
+  max-width: 90px;
   max-height: 200px;
-  margin:10px auto;
+  margin-left:107px;
   filter: drop-shadow(5px 5px 10px black);
   margin-top: -30px;
 }
@@ -152,8 +154,16 @@ form input{
   font-size: 14px;
   text-decoration:none;
   color: black;  
-  padding: 3px;
   border-color: rgba(206, 28, 28, 0.872);
+}
+
+.container-data-profile{
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  margin-left: 150px;
+  margin-top: -210px;
 }
   /*Rak*/
 
@@ -221,8 +231,6 @@ form input{
   width: 100%;
   justify-content: space-between;
   margin-top: 60px;
-
-
 }
 .button-updateDelete-event{
   font-family: 'Baloo Da 2', cursive;
@@ -233,3 +241,27 @@ form input{
   border: none;
   padding: 5px 25px;
 }
+
+/*LOGO PAGS*/
+
+.logoname {
+  max-width: 100px;
+  max-height: 100px;
+  margin: 10px auto;
+  display:block;
+  margin-top: -40px;
+} 
+#menu ul {
+  display: flex;
+  }
+
+  h2{
+    font-family: 'Baloo Da 2', cursive;
+    font-size: 20px;
+    display:block;
+    text-align: center;
+    background-size: 100%;
+    margin-top: 40px;
+  }
+
+  

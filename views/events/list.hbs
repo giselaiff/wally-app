@@ -3,7 +3,6 @@
 
 <ul id="menu">
 <li><a href="/profile/{{currentUser._id}}" class="button-menu">My Profile</a></li>
-<li><a href="/events"class="button-menu">Events</a></li>
 <li><a href="/"class="button-menu">Logout</a></li>
 </ul>
 
@@ -23,7 +22,7 @@
 <ul>
   {{#each events }}
   <li>
-    <a href="/events/{{this._id}}" >{{ this.name }}<img src="{{eventData.image}}" class="eventsimg">
+   <a href="/events/{{this._id}}" >{{ this.name }}<img src=" {{!-- {{eventData.image}}--}}/images/eventPaseoPlaya.jpg" class="eventsimg"> 
   </li>
   {{/each}}
 </ul>
@@ -31,3 +30,4 @@
 
 <a href="/events/add"class="buttonadd">+</a>
 
+<footer> © Copyright 2020 Gisela García and Raquel Muniesa, Barcelona </footer>

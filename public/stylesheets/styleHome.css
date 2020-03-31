@@ -1,5 +1,4 @@
-
-  @import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap');
 
 body {
@@ -7,8 +6,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 10px;
-    margin: 30px;
-
+    margin: 20px;
   }
 
   .logoname{

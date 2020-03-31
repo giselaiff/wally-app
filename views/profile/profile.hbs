@@ -1,19 +1,20 @@
 <link rel='stylesheet' href='/stylesheets/style.css' >
 
 
+<div class="container-individual-profile">
+    
 <h1 class="profile-title">My profile</h1>
 <div class="image-user">
          <img src="{{!--{{currentUser.image}}--}}/images/perfil.png" alt="image-profile"> 
     </div>
-<div class="profile-content">
-    <div class="profile-information">
+    <div class="container-data-profile">
         <h3>I'm {{currentUser.username}}</h3>
         <h3>Age: {{currentUser.age}}</h3>
         <h3>City: {{currentUser.city}}</h3>
         <h3>Mood: {{currentUser.mood}}</h3> 
-        <h3>About me: {{currentUser.description}}</h3>
+        <h3>About me: <br> {{currentUser.description}}</h3>
   </div>
-
+  
   <h1 class="event-list">Joined events:</h1>
     <ul class="event-list-profile">
   {{#each myEvents }}
@@ -38,6 +39,7 @@
 
 {{/if}}
 </nav>
+  </div>
 
 
 
