@@ -1,43 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap');
+/*ROJ #E75A5F - NAR #FDB15D - AMARI #FEE698 PIO FAFADC*/
+.back-button {
+    visibility: hidden;
+  }
 
 body {
-    background-image: url(/images/photo-1585002640812-f164768c4435.jpeg);
+    background-image: url(/images/fondohome.png);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 10px;
-    margin: 20px;
-  }
-
-  .logoname{
-    visibility: hidden;
-  }
-
-  .back-button {
-    visibility: hidden;
-  }
-  
-  h1 {
-    color: whitesmoke;
-    text-shadow: black 0.1em 0.1em 0.2em;
-    font-size: 120px;
-    font-family: 'Liu Jian Mao Cao', cursive;
-    text-align: center;
-    font-size: 60px;
-    margin-top: -20px;
+    max-height: 639px;
   }
 
   .logoimg{
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 500px;
+    max-height: 500px;
     margin: auto;
     display:block;
-    filter: drop-shadow(5px 5px 10px black);
-    margin-top: 30px;
     opacity: 80%;
 }
-  
-.button{
+.buttonsignup{
   font-family: 'Baloo Da 2', cursive;
   font-size: 14px;
   text-decoration:none;
@@ -46,57 +28,38 @@ body {
   padding: 3px;
   display:block;
   margin-top: 5px;
-  background-color: rgba(206, 28, 28, 0.872);
+  background-color: #E75A5F;
   max-width: 200px;
-  max-height: 200px;
+  max-height: 500px;
   margin:10px auto;
-  filter: drop-shadow(5px 5px 10px black);
-  margin-top: 20px;
 }
 
-  h2{
-    background-image: url(https://media.giphy.com/media/gCxGeZAimDeXm/giphy.gif);
-    background-size: cover;
-    color: transparent;
-    -moz-background-clip: text;
-    -webkit-background-clip: text;
-    font-size: 120px;
-    font-family: 'Liu Jian Mao Cao', cursive;
-    text-align: center;
-    font-size: 60px;
-    margin-top: 25px;
-  }
+p{
+  font-family: 'Baloo Da 2', cursive;
+  color: whitesmoke;
+  font-size: 13px;
+  text-align: center;
+}
+.buttonlogin{
+  font-family: 'Baloo Da 2', cursive;
+  font-size: 14px;
+  text-decoration:none;
+  background-color: #E75A5F;
+  color: whitesmoke;
+  padding: 3px;
+  max-width: 200px;
+  max-height: 500px;
+  margin:10px auto;
+  margin-left: 15px;
+}
 
-  .nextpage{
-    font-family: 'Baloo Da 2', cursive;
-    font-size: 20px;
-    text-decoration:none;
-    text-align: center;
-    color: whitesmoke;
-    margin:10px;
-    padding: 3px;
-    align-items: center;
-    margin-top: 65px;
-    background-color: rgba(206, 28, 28, 0.872);
-    filter: drop-shadow(5px 5px 10px black);
-  
-  }
-  
-  a:hover {
-    color:  rgba(206, 28, 28, 0.872);
-    background-color: whitesmoke;
-  }
-  
-  button:hover {
-    color:  rgba(206, 28, 28, 0.872);
-    background-color: whitesmoke;
-  }
-  
+
   footer{
     width: 100%;
     text-align: center;
     font-size: 10px;
-    margin-top: 60px;
     color: whitesmoke;
     text-shadow: black 0.1em 0.1em 0.2em;
+    margin-top: 50px;
+
   }
