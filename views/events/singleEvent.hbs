@@ -1,4 +1,4 @@
-<link rel='stylesheet' href='/stylesheets/style.css' class="container">
+<link rel='stylesheet' href='/stylesheets/styleSingleEvent.css' class="container">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
     
 {{!-- <div class="image-event">        
@@ -42,14 +42,17 @@
                             <button type="submit" class="button-join">Join</button>
                         </form>
             {{/if}}
+            <br>
+<br><br>
+<br><br>
                     {{#if isOwner}}
                         <div class="container-buttonEvent-update-delete">
                             <div>
-                                <a href="/events/{{eventData._id}}/update"class="button-updateDelete-event">Update</a>
+                                <a href="/events/{{eventData._id}}/update"class="button-update-event">Update</a>
                             </div>
                             <div>
                                <form action="/events/{{eventData._id}}/delete" onclick="return confirm('Are you sure you want to delete this event?');" method="post">
-                                    <button type="submit" class="button-updateDelete-event">Delete</button>
+                                    <button type="submit" class="button-delete-event">Delete</button>
                                 </form>
                             </div>
                         </div>

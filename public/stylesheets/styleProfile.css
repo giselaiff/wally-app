@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap');
+/*ROJ #E75A5F - NAR #FDB15D - AMARI #FEE698 PIO FAFADC*/
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(/images/profilepic.png);
+    background-repeat: no-repeat;  
+  }
+
+
+.container-individual-profile{
+    display: flex;
+    flex-direction: column;
+    /*background-color: rgba(250, 250, 220, 0.995);*/
+    -webkit-border-top-left-radius: 5%;
+    -webkit-border-top-right-radius: 5%;
+    margin-top: 250px;
+  }
+
+  .user-name, .event-list{
+    color: rgba(231, 90, 95, 0.714);
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    display: block;
+ 
+  }
+  .profile-style {
+    color: rgba(0, 0, 0, 0.721);
+    margin: 10px 20px 0px 0px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 30px;
+    font-size: 14px;
+  
+
+  }  
+  .profile-style-description{
+    color: rgba(0, 0, 0, 0.721);
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 30px;
+    margin-left: 40px;
+    margin-right: 10px;
+    text-align: justify;
+    font-size: 14px;
+
+  }
+  
+  .age-icon, .pinmap-icon, .mood-icon{
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left:40px;
+  }
+   
+  .container-icons{
+    
+    background-image: url(/images/fondohome.png);
+    background-repeat: no-repeat;
+    -webkit-border-top-left-radius: 3%;
+    -webkit-border-top-right-radius: 3%;
+    
+  }
+  .container-icon{
+    display: flex;
+  }
+
+
+
+  /*LIST JOINED*/
+
+/*BUTTONS*/
+
+.buttonedit{
+    font-family: 'Baloo Da 2', cursive;
+    font-size: 14px;
+    text-decoration:none;
+    text-align: center;
+    color: whitesmoke;
+    padding: 3px;
+    display:block;
+    background-color: #FEE698;
+    width: 150px;
+    -webkit-border-top-left-radius: 20%;
+    -webkit-border-top-right-radius: 20%;
+    -webkit-border-bottom-left-radius: 20%;
+    -webkit-border-bottom-right-radius: 20%;
+    margin-left: 110px;
+  }
+
+  .buttondelacc{
+    font-family: 'Baloo Da 2', cursive;
+    font-size: 14px;
+    text-decoration:none;
+    text-align: center;
+    color: whitesmoke;
+    padding: 3px;
+    display:block;
+    margin-top: 5px;
+    background-color: #FEE698;
+    width: 150px;
+    max-height: 500px;
+    margin:10px auto;
+    outline:none;
+    border: none;
+    margin-top:-30px;
+    -webkit-border-top-left-radius: 20%;
+    -webkit-border-top-right-radius: 20%;
+    -webkit-border-bottom-left-radius: 20%;
+    -webkit-border-bottom-right-radius: 20%;
+    margin-left: 110px;
+    margin-top: 2px;
+  }
+
+
+.buttoneditgo{
+    font-family: 'Baloo Da 2', cursive;
+    font-size: 14px;
+    text-decoration:none;
+    text-align: center;
+    color: whitesmoke;
+    padding: 3px;
+    display:block;
+    background-color: #FEE698;
+    width: 150px;
+    max-height: 500px;
+    margin:10px auto;
+    outline:none;
+    border: none;
+    -webkit-border-top-left-radius: 20%;
+    -webkit-border-top-right-radius: 20%;
+    -webkit-border-bottom-left-radius: 20%;
+    -webkit-border-bottom-right-radius: 20%;
+    margin-left: 110px;
+    margin-top: 100px;
+  }
+
+  input[type="text"]
+{
+    background: transparent;
+    border: none;
+
+}
+input[name="username"]
+{
+    background: transparent;
+    border: none;
+    color: rgba(231, 90, 95, 0.714);
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+
+}
+
+::-webkit-input-placeholder {
+     font-family: 'Baloo Da 2', cursive;
+     font-size: 14px;
+    } 
+
+    .content-select select{
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        
+    }
+    
+    .content-select select::-ms-expand {
+        display: none;
+    
+    }
+    .content-select{
+        max-width: 250px;
+        position: relative;
+        margin-left: 60px;
+        
+    }
+    
+     
+    .content-select select{
+        display: inline-block;
+        width: 100%;
+        cursor: pointer;
+          padding: 7px 10px;
+          height: 42px;
+          outline: 0; 
+          border: 0;
+        border-radius: 0;
+        background: #f0f0f0;
+        color: #7b7b7b;
+        font-size: 1em;
+        color: #999;
+        font-family: 'Quicksand', sans-serif;
+        border:2px solid rgba(0,0,0,0.2);
+        border-radius: 12px;
+        position: relative;
+        transition: all 0.25s ease;
+        text-align: center;
+    }
+     

@@ -1,33 +1,43 @@
-<link rel='stylesheet' href='/stylesheets/style.css' >
+<link rel='stylesheet' href='/stylesheets/styleProfile.css' >
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
 
 <form action="/profile/{{profileData._id}}" method="post">
-
 <div class="container-individual-profile">
-
-<h1 class="profile-title">Edit your profile</h1>
-<div class="image-user">
-         <img src="/images/perfil.png" alt="image-profile"> 
-    </div>
-    <div class="container-data-profile">
-        <h3>I'm <input type="text" name="username" id="user-name" placeholder="Name" value="{{profileData.username}}"></h3>
-        <h3>Age: <input type="text" name="age" id="user-age" placeholder="Age" value="{{profileData.age}}"></h3>
-        <h3>City: <input type="text" name="city" id="user-city" placeholder="City" value="{{profileData.city}}"></h3>
-        <h3>Choose a mood: 
-          <select id="mood" name="mood">
+ 
+ </div>
+   <div class="container-icons" >  
+    
+     <h1 class="user-name"><input name="username" id="user-name" placeholder="Name" value="{{profileData.username}}"></h1>
+     <div class="container-icon">
+                <img class="age-icon" src="/images/ageicon.png">
+                <h3 class="profile-style">Age:  <input type="text" name="age" id="user-age" placeholder="Age" value="{{profileData.age}}"></h3>
+            </div> 
+            
+            <div class="container-icon">
+                <img class="pinmap-icon" src="/images/pinmapicono-removebg-preview.png">
+                <h3 class="profile-style">City: <input type="text" name="city" id="user-city" placeholder="City" value="{{profileData.city}}"></h3>
+            </div>
+              
+    <div class="container-icon">
+     <img class="mood-icon" src="/images/moodicon-removebg-preview.png">
+        <h3 class="profile-style">Mood:  <select id="mood" name="mood">
     <option value="Chill">Chill</option>
     <option value="Medium">Medium</option>
     <option value="Hard">Hard</option>
-  </select><br></h3> 
-  </div>
- <div class="about-me-edit">
-          <h3>About me:<br><input type="text" name="description" id="user-description"placeholder="About me" value="{{profileData.description}}"><br></h3>
+  </select></h3> 
+  </div></h3>
+   <br>
+
+<h3 class="profile-style-description"><input type="text" name="description" id="user-description"placeholder="About me" value="{{profileData.description}}"></h3>
+   
+  <button type="submit"class="buttoneditgo">Submit</button>
+ <br>
+
  </div>
-
-  <button type="submit"class="button-next">Submit</button>
-
+   
 </form>
 
-  
+ 
 
 
 

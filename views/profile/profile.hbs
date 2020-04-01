@@ -1,21 +1,29 @@
-<link rel='stylesheet' href='/stylesheets/style.css' >
-
+<link rel='stylesheet' href='/stylesheets/styleProfile.css' >
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
 
 <div class="container-individual-profile">
-    
-<h1 class="profile-title">My profile</h1>
-<div class="image-user">
-         <img src="{{!--{{currentUser.image}}--}}/images/perfil.png" alt="image-profile"> 
-    </div>
-    <div class="container-data-profile">
-        <h3>I'm {{currentUser.username}}</h3>
-        <h3>Age: {{currentUser.age}}</h3>
-        <h3>City: {{currentUser.city}}</h3>
-        <h3>Mood: {{currentUser.mood}}</h3> <br>
-  </div>
-  <div class="about-me">
-          <h3>About me: <br> {{currentUser.description}}</h3>
-</div>
+ 
+ </div>
+   <div class="container-icons" >  
+     <h1 class="user-name">{{currentUser.username}}</h1>
+     <div class="container-icon">
+                <img class="age-icon" src="/images/ageicon.png">
+                <h3 class="profile-style">Age: {{currentUser.age}}</h3>
+            </div> 
+            
+            <div class="container-icon">
+                <img class="pinmap-icon" src="/images/pinmapicono-removebg-preview.png">
+                <h3 class="profile-style">City: {{currentUser.city}}</h3>
+            </div>
+           
+   <div class="container-icon">
+     <img class="mood-icon" src="/images/moodicon-removebg-preview.png">
+        <h3 class="profile-style">Mood: {{currentUser.mood}}</h3>
+ </div>
+           
+<h3 class="profile-style-description">{{currentUser.description}}</h3>
+
+
   <h1 class="event-list">Joined events:</h1>
     <ul class="event-list-profile">
   {{#each myEvents }}
@@ -25,24 +33,23 @@
   {{/each}}
 </ul>
 
-
+<br>
 
 {{#if isOwner}}
-<nav >
-<div class="profile-modifications">
-<a href="/profile/{{currentUser._id}}/edit"class="button">Edit</a>
-</div>
+<a href="/profile/{{currentUser._id}}/edit"class="buttonedit">Edit</a>
+
+<br>
+
 
 <form action="/profile/{{currentUser._id}}/delete" onclick="return confirm('Are you sure you want to delete your account?');" method="post">
-      <button class="delete-acc" type="submit">Delete account</button>
+      <button class="buttondelacc" type="submit">Delete account</button>
     </form> 
 
 
+
 {{/if}}
-</nav>
-  </div>
 
-
+<br>
 
 {{!-- <script>
 function confirmar()

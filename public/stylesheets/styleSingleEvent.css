@@ -377,7 +377,6 @@ background-repeat: no-repeat;
 .event-name{
   color: rgba(231, 90, 95, 0.714);
   margin-top: 10px;
-  margin-left: 20px;
   text-align: center;
   font-family: 'Open Sans Condensed', sans-serif;
 }
@@ -408,6 +407,7 @@ background-repeat: no-repeat;
   height: 20px;
   margin-top: 10px;
   margin-right: 10px;
+  margin-left: 20px;
 
 
 }
@@ -418,6 +418,7 @@ background-repeat: no-repeat;
 }
 .container-icon{
   display: flex;
+  
 }
 
 .button-join{
@@ -427,4 +428,53 @@ background-repeat: no-repeat;
  
   background-color: rgb(253, 247, 219);
   color: rgba(231, 90, 95, 0.714);
+}
+
+/*LISTJOIN*/
+
+.a{
+  text-align: center;
+  text-decoration:none;
+}
+
+/*BUTTONS*/
+
+.button-update-event{
+  font-family: 'Baloo Da 2', cursive;
+    font-size: 14px;
+    text-decoration:none;
+    text-align: center;
+    color: whitesmoke;
+    padding: 3px;
+    display:block;
+    background-color: #FEE698;
+    width: 150px;
+    -webkit-border-top-left-radius: 20%;
+    -webkit-border-top-right-radius: 20%;
+    -webkit-border-bottom-left-radius: 20%;
+    -webkit-border-bottom-right-radius: 20%;
+    margin-left: 90px;
+}
+.button-delete-event{
+  font-family: 'Baloo Da 2', cursive;
+  font-size: 14px;
+  text-decoration:none;
+  text-align: center;
+  color: whitesmoke;
+  padding: 3px;
+  display:block;
+  margin-top: 5px;
+  background-color: #FEE698;
+  width: 150px;
+  max-height: 500px;
+  margin:10px auto;
+  outline:none;
+  border: none;
+  margin-top:-30px;
+  -webkit-border-top-left-radius: 20%;
+  -webkit-border-top-right-radius: 20%;
+  -webkit-border-bottom-left-radius: 20%;
+  -webkit-border-bottom-right-radius: 20%;
+  margin-left: 92px;
+  margin-top: 2px;
 }
