@@ -12,9 +12,7 @@
         <h3 class="singleEvent-style">Location: {{eventData.location}}</h3>
         <h3 class="singleEvent-style">Date: {{momentDate}}</h3>
         <h3 class="singleEvent-style">Hour: {{eventData.hour}}h</h3>
-    </div>
-
-    {{#if isJoined}}
+        {{#if isJoined}}
         <form action="/events/{{eventData._id}}/unjoin" method="post">
             <button type="submit" class="button-join">Disjoin</button>
         </form>
@@ -27,23 +25,25 @@
         <form action="/events/{{eventData._id}}/join" method="post">
             <button type="submit" class="button-join">Join</button>
         </form>
+        {{/if}}
+
+        {{#if isOwner}}
+            <div class="container-buttonEvent-update-delete">
+                <div>
+                    <a href="/events/{{eventData._id}}/update"class="button-updateDelete-event">Update</a>
+                </div>
+                <div>
+                    <form action="/events/{{eventData._id}}/delete" onclick="return confirm('Are you sure you want to delete this event?');" method="post">
+                        <button type="submit" class="button-updateDelete-event">Delete</button>
+                    </form>
+                </div> 
+        
+            </div>
+       {{/if}}
+    </div>
+
+    
       
-    {{/if}}
+   
 
         {{!-- FOREACH DEL ARRAY JOIN --}}
-
-    {{#if isOwner}}
-    <div class="container-buttonEvent-update-delete">
-        <div>
-            <a href="/events/{{eventData._id}}/update"class="button-updateDelete-event">Update</a>
-        </div>
-        <div>
-            <form action="/events/{{eventData._id}}/delete" onclick="return confirm('Are you sure you want to delete this event?');" method="post">
-                <button type="submit" class="button-updateDelete-event">Delete</button>
-            </form>
-        </div> 
-        
-    </div>
-       
-    {{/if}}
-</div>
