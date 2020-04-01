@@ -200,4 +200,11 @@ input[name="username"]
         transition: all 0.25s ease;
         text-align: center;
     }
-     
+     .event-list-profile{
+      list-style-type:none;
+     }
+
+     .name-listevent{  
+      text-decoration: none;
+      color: black;
+      }

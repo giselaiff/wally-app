@@ -361,7 +361,7 @@ body{
   margin: 0;
   padding: 0;
   background-image: url(/images/ciudad.jpg);
-background-repeat: no-repeat;
+  background-repeat: no-repeat;
 }
 
 .container-data-event{
@@ -419,15 +419,6 @@ background-repeat: no-repeat;
 .container-icon{
   display: flex;
   
-}
-
-.button-join{
-  border: black;
-  padding: 10px 50px;
- border-radius: 7%;
- 
-  background-color: rgb(253, 247, 219);
-  color: rgba(231, 90, 95, 0.714);
 }
 
 /*LISTJOIN*/
@@ -572,3 +563,40 @@ input[name="name"]
         text-align: center;
     }
      
+    .button-join{
+      font-family: 'Baloo Da 2', cursive;
+      font-size: 14px;
+      text-decoration:none;
+      text-align: center;
+      color: whitesmoke;
+      padding: 3px;
+      display:block;
+      position: absolute;
+      right:20px;
+      top:225px;
+      margin-top: 5px;
+      background-color: #E75A5F;
+      width: 50px;
+      height: 50px;
+      margin:10px auto;
+      outline:none;
+      border: none;
+      border-radius: 50%;
+      margin-left: 92px;
+      margin-top: 2px;
+    }
+
+    .joins{
+      color: rgba(231, 90, 95, 0.714);
+      font-family: 'Baloo Da 2', cursive;
+      font-size: 20px;
+    }
+
+    .join-list{
+      list-style-type:none;
+     
+    }
+    .event-listname{
+      text-decoration: none;
+      color: black;
+    }
