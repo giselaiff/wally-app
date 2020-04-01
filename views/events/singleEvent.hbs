@@ -1,49 +1,65 @@
+<link rel='stylesheet' href='/stylesheets/style.css' class="container">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+    
+{{!-- <div class="image-event">        
+        <img src=" {{eventData.image}} /images/eventPaseoPlaya.jpg" class="eventsimg singleEventImg">
+    </div> --}}
+    <div class="container-data-event">
+        <div>
+            <h1 class="event-name">{{eventData.name}}</h1>
+        </div>
+        <div class="container-icons" >
+            <div class="container-icon">
+                <img class="mood-icon" src="/images/moodicon-removebg-preview.png">
+                <h3 class="singleEvent-style">Event mood: {{eventData.mood}}</h3>
+            </div>
+            <div class="container-icon">
+                <img class="pinmap-icon" src="/images/pinmapicono-removebg-preview.png">
+                <h3 class="singleEvent-style">Location: {{eventData.location}}</h3>
+            </div>
+            <div class="container-icon">
+                <img class="calendar-icon" src="/images/calendarioicono-removebg-preview.png">
+                <h3 class="singleEvent-style">Date: {{momentDate}}</h3>
+            </div>
+            <div class="container-icon" >
+                <img class="time-icon" src="/images/relojicono-removebg-preview.png">
+                <h3 class="singleEvent-style"> Hour: {{eventData.hour}}h</h3>
+            </div>
+            
+            <h3 class="singleEvent-style-description">{{eventData.description}}</h3>
+            
+            {{#if isJoined}}
+                 <form action="/events/{{eventData._id}}/unjoin" method="post">
+                    <button type="submit" class="button-join">Disjoin</button>
+                </form>
+                <ul class= "join-list">
+                    {{#each eventData.joined}}
+                        <li> <a href="/profile/{{this._id}}">{{this.username}}</a></li>
+                    {{/each}}
+                </ul>
+                    {{else}}
+                        <form action="/events/{{eventData._id}}/join" method="post">
+                            <button type="submit" class="button-join">Join</button>
+                        </form>
+            {{/if}}
+                    {{#if isOwner}}
+                        <div class="container-buttonEvent-update-delete">
+                            <div>
+                                <a href="/events/{{eventData._id}}/update"class="button-updateDelete-event">Update</a>
+                            </div>
+                            <div>
+                               <form action="/events/{{eventData._id}}/delete" onclick="return confirm('Are you sure you want to delete this event?');" method="post">
+                                    <button type="submit" class="button-updateDelete-event">Delete</button>
+                                </form>
+                            </div>
+                        </div>
+                    {{/if}}
+        </div>
+    </div>
 
-<div class="container-individual-Event">
     
 
-    <div class="image-event">        
-        <img src="{{!-- {{eventData.image}} --}}/images/eventPaseoPlaya.jpg" class="eventsimg singleEventImg">
-    </div>
-    <div class="container-data-event">
-        <h1 class="event-name">{{eventData.name}}</h1>
-        <h3 class="singleEvent-style-description">{{eventData.description}}</h3>
-        <h3 class="singleEvent-style">Event mood: {{eventData.mood}}</h3>
-        <h3 class="singleEvent-style">Location: {{eventData.location}}</h3>
-        <h3 class="singleEvent-style">Date: {{momentDate}}</h3>
-        <h3 class="singleEvent-style">Hour: {{eventData.hour}}h</h3>
-    </div>
-
-    {{#if isJoined}}
-        <form action="/events/{{eventData._id}}/unjoin" method="post">
-            <button type="submit" class="button-join">Disjoin</button>
-        </form>
-          <ul class= "join-list">
-            {{#each eventData.joined}}
-            <li> <a href="/profile/{{this._id}}">{{this.username}}</a></li>
-            {{/each}}
-        </ul>
-        {{else}}
-        <form action="/events/{{eventData._id}}/join" method="post">
-            <button type="submit" class="button-join">Join</button>
-        </form>
-      
-    {{/if}}
 
         {{!-- FOREACH DEL ARRAY JOIN --}}
 
-    {{#if isOwner}}
-    <div class="container-buttonEvent-update-delete">
-        <div>
-            <a href="/events/{{eventData._id}}/update"class="button-updateDelete-event">Update</a>
-        </div>
-        <div>
-            <form action="/events/{{eventData._id}}/delete" onclick="return confirm('Are you sure you want to delete this event?');" method="post">
-                <button type="submit" class="button-updateDelete-event">Delete</button>
-            </form>
-        </div> 
-        
-    </div>
-       
-    {{/if}}
-</div>
+    
