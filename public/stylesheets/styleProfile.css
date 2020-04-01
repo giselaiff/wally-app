@@ -208,3 +208,24 @@ input[name="username"]
       text-decoration: none;
       color: black;
       }
+      
+      .back-button{
+        font-family: 'Baloo Da 2', cursive;
+        font-size: 14px;
+        text-decoration:none;
+        text-align: center;
+        color: whitesmoke;
+        padding: 3px;
+        display:block;
+        position: absolute;
+        left:10px;
+        
+        margin-top: 5px;
+        background-color:  rgba(231, 90, 95, 0.714);
+        width: 20px;
+        margin:10px auto;
+        outline:none;
+        border: none;
+        border-radius: 50%;
+        margin-top: 27px;
+      }

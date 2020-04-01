@@ -1,11 +1,14 @@
 <link rel='stylesheet' href='/stylesheets/styleEvents.css' >
-<img class="logoname" src="/images/wallyname.png">
 
-<ul id="menu">
+<div class="logoheader">
+<img class="logoname" src="/images/logoname.png">
+</div>
+<div class="menu">
+<ul class="menulist">
 <li><a href="/profile/{{currentUser._id}}" class="button-menu">My Profile</a></li>
 <li><a href="/"class="button-menu">Logout</a></li>
 </ul>
-
+</div>
 <h2>
 {{#if info}}
 {{info}}{{ currentUser.username }}
@@ -19,10 +22,10 @@
 
 
 <div class="eventimg-list">
-<ul>
+<ul class="eventslist">
   {{#each events }}
   <li>
-   <a href="/events/{{this._id}}" >{{ this.name }}<img src=" {{!-- {{eventData.image}}--}}/images/eventPaseoPlaya.jpg" class="eventsimg"> 
+   <h1 class="eventnamelist"><a href="/events/{{this._id}}" class="clasename">{{ this.name }}<img src=" {{!-- {{eventData.image}}--}}/images/eventPaseoPlaya.jpg" class="eventsimg"> </a></h1>
   </li>
   {{/each}}
 </ul>

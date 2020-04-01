@@ -1,34 +1,41 @@
-
-{{!-- action to route post --}}
-<h1>Create an event</h1>
-
-<form action="/events/add" method="post">
- <div class="image-event">        
-    <img src="{{!-- {{eventData.image}} --}}/images/eventPaseoPlaya.jpg" class="eventsimg singleEventImg">
-  </div>
-<div class="container-data-event">
-<label class="label-create-event" for="name">Tilte</label>
-  <input class="form-create-event-name" type="text" name="name" id="form-create-event"><br>
-  <label class="label-create-event" for="description">Description</label>
-  <input class="form-create-event-dscription" type="text" name="description" id="form-create-event"><br>
-  <label class="label-create-event" for="date">Date</label>
-  <input class="form-create-event-date" type="date" name="date"  id="form-create-event"><br>
-  <label class="label-create-event" for="location">Location</label>
-  <input class="form-create-event-location" type="text" name="location" id="form-create-event"><br>
-  <label class="label-create-event" for="hour" >Hour</label>
-  <input class="form-create-event-hour" type="text" placeholder="00:00" name="hour" id="form-create-event"><br>
-  <label class="label-create-event" for="mood">Choose a mood:</label> 
-  <select class="form-create-event-mood" name="mood" id="form-create-event">
+<link rel='stylesheet' href='/stylesheets/styleSingleEvent.css' class="container">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+    
+    <div class="container-data-event">
+        <div>
+            <h1 class="event-title"> <input class="form-create-event-name" type="text" name="title" placeholder="Title" id="form-create-event"></h1>
+        </div>
+        <div class="container-icons" >
+            <div class="container-icon">
+                <img class="mood-icon" src="/images/moodicon-removebg-preview.png">
+                <h3 class="singleEvent-style">Event mood: <select class="form-create-event-mood" name="mood" id="form-create-event">
     <option value="Chill">Chill</option>
     <option value="Medium">Medium</option>
     <option value="Hard">Hard</option>
-  </select><br>
-  <br>
-  {{#if error}}
+  </select></h3>
+            </div>
+            <div class="container-icon">
+                <img class="pinmap-icon" src="/images/pinmapicono-removebg-preview.png">
+                <h3 class="singleEvent-style">Location: <input class="form-create-event-location" type="text" name="location" id="form-create-event"></h3>
+            </div>
+            <div class="container-icon">
+                <img class="calendar-icon" src="/images/calendarioicono-removebg-preview.png">
+                <h3 class="singleEvent-style">Date: <input class="form-create-event-date" type="date" name="date"  id="form-create-event"></h3>
+            </div>
+            <div class="container-icon" >
+                <img class="time-icon" src="/images/relojicono-removebg-preview.png">
+                <h3 class="singleEvent-style"> Hour: <input class="form-create-event-hour" type="text" placeholder="00:00" name="hour" id="form-create-event"></h3>
+            </div>
+            
+            <h3 class="singleEvent-style-description">Description: <input class="form-create-event-dscription" type="text" name="description" id="form-create-event"></h3>
+    <br>   <br>   <br>   <br>   <br>   <br>   <br>  
+           
+        {{#if error}}
   {{error}}
   {{/if}}
-  <br>
-</div>
-  
+  </div>
 <button type="submit"class="button-submit-create-event">Submit</button>
-</form>
+
+
+    </div>
+
