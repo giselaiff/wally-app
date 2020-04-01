@@ -1,29 +1,41 @@
-<h1>Edit event</h1>
+<link rel='stylesheet' href='/stylesheets/styleSingleEvent.css' class="container">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
 
 <form action="/events/{{event.id}}" method="post">
-
-  <div class="image-event">        
-    <img src="{{!-- {{eventData.image}} --}}/images/eventPaseoPlaya.jpg" class="eventsimg singleEventImg">
-  </div>
-  <div class="container-data-event">
-    <label class="label-update-event" for="name">Title:</label>
-    <input class="form-update-event-name" type="text" name="name" id="form-update-event"  value="{{event.name}}"><br>
-    <label class="label-update-event" for="description">Description:</label>
-    <input class="form-update-event-description" type="text" name="description" id="form-update-event" value="{{event.description}}"><br>
-    <label class="label-update-event" for="location">Location</label>
-    <input class="form-update-event-location" type="text" name="location" id="form-update-event" value="{{event.location}}"><br>
-    <label class="label-update-event" for="date">Date</label>
-    <input class="form-update-event-date" type="date" name="date" id="form-update-event" value="{{event.date}}"><br>
-    <label class="label-update-event"for="hour">Hour:</label>
-    <input class="form-update-event-hour" type="text" name="hour" id="form-update-event" value="{{event.hour}}"><br>
-    <label class="label-update-event" for="mood">Mood:</label>
-    <select class="form-update-event-mood" id="form-update-event" name="mood">
+ <div class="container-data-event">
+        <div>
+            <h1 class="event-name"><input class="form-update-event-name" type="text" name="name" id="form-update-event"  value="{{event.name}}"></h1>
+        </div>
+        <div class="container-icons" >
+            <div class="container-icon">
+                <img class="mood-icon" src="/images/moodicon-removebg-preview.png">
+                <h3 class="singleEvent-style">Event mood:   <select class="form-update-event-mood" id="form-update-event" name="mood">
       <option value="Chill">Chill</option>
       <option value="Medium">Medium</option>
       <option value="Hard">Hard</option>
-    </select><br>
-  </div>
+    </select></h3>
+            </div>
+            <div class="container-icon">
+                <img class="pinmap-icon" src="/images/pinmapicono-removebg-preview.png">
+                <h3 class="singleEvent-style">Location: <input class="form-update-event-location" type="text" name="location" id="form-update-event" value="{{event.location}}"></h3>
+            </div>
+            <div class="container-icon">
+                <img class="calendar-icon" src="/images/calendarioicono-removebg-preview.png">
+                <h3 class="singleEvent-style">Date: <input class="form-update-event-date" type="date" name="date" id="form-update-event" value="{{event.date}}"></h3>
+            </div>
+            <div class="container-icon" >
+                <img class="time-icon" src="/images/relojicono-removebg-preview.png">
+                <h3 class="singleEvent-style"> Hour:  <input class="form-update-event-hour" type="text" name="hour" id="form-update-event" value="{{event.hour}}"></h3>
+            </div>
+            
+            <h3 class="singleEvent-style-description"><input class="form-update-event-description" type="text" name="description" id="form-update-event" value="{{event.description}}"></h3>
+
+ <br> <br> 
+<br><br>
+<br><br>
   <div>
-    <button type="submit" class="button-submit-update">Submit</button>
-  </div> 
+    <button type="submit" class="buttonupdgo">Submit</button>
+  </div>
+    <br>
+  </div>
 </form>
