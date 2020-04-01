@@ -1,22 +1,31 @@
 <link rel='stylesheet' href='/stylesheets/styleAuth.css' >
 
-<h1>Log in</h1>
+<img class="logoimg" src="/images/logoname.png">
+
+<div class="cuadrotrans">
+
+<div class= "form"></div>
 
 <form id="form" action="/login" method="POST">
-  <label for="username">Username</label><br>
-  <input type="text" name="username" placeholder="Your username">
+  <input type="text" name="username" placeholder="Your username">  
+  <label for="username">_____________</label><br>
+
 <br>
-  <label for="password">Password</label><br>
   <input type="password" name="password" placeholder="********">
-<br>
+  <label for="password">_____________</label><br>
+
+
+<div class= "error">
 {{#if error}}
   {{error}}
   {{/if}}
-  <br>
-  <button class="nextpage" type="submit">Enter</button>
+</div>
 
-  
+  <button class="buttonenter" type="submit">Enter</button>
+  <p>Are you new?<a href='./signup' class="buttonnew">Join us</a>
+
 </form>
 
+</div>
+<footer class="footerauth"> © Copyright 2020 Gisela García and Raquel Muniesa, Barcelona </footer>
 
-<a href='./signup' class="button">Signup</a>

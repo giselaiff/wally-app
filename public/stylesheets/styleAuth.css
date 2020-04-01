@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap');
+/*ROJ #E75A5F - NAR #FDB15D - AMARI #FEE698 PIO FAFADC*/
+
+body {
+    background-image: url(/images/fondohome.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .logoimg{
+    width: 250px;
+    height: 300px;
+    margin: auto;
+    display:block;
+    opacity: 80%;
+    margin-top: 10px;
+}
+
+.form{
+    text-align: center;
+    margin-top: -50px;
+}
+.cuadrotrans{
+    background-color: rgba(245, 245, 245, 0.214);
+    position: absolute;
+    margin-left: 60px;
+    margin-top: -190px;
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+}
+
+input[type="text"]
+{
+    background: transparent;
+    border: none;
+    margin-top: 150px;
+    text-align: center;
+    margin-left:  70px;
+    color: rgba(245, 245, 245, 0.769); 
+
+}
+
+input[type="password"]
+{
+    background: transparent;
+    border: none;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 70px;
+    color: rgba(245, 245, 245, 0.769); 
+}
+
+label[for="username"]{
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 70px;
+    color: rgba(245, 245, 245, 0.769); 
+
+}
+
+label[for="password"]{
+
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 70px;
+    color: whitesmoke; 
+
+}
+::-webkit-input-placeholder {
+     color: rgba(245, 245, 245, 0.769); 
+     font-family: 'Baloo Da 2', cursive;
+     font-size: 14px;
+     
+    } 
+
+    .buttonenter{
+        font-family: 'Baloo Da 2', cursive;
+        font-size: 14px;
+        text-decoration:none;
+        text-align: center;
+        color: whitesmoke;
+        padding: 3px;
+        display:block;
+        margin-top: 5px;
+        background-color: #E75A5F;
+        width: 55%;
+        margin:10px auto;
+        outline:none;
+        border: none;
+      }
+
+      .buttonnew{
+            font-family: 'Baloo Da 2', cursive;
+            font-size: 14px;
+            text-decoration:none;
+            background-color: #E75A5F;
+            color: whitesmoke;
+            padding: 3px;
+            max-width: 200px;
+            max-height: 500px;
+            margin:10px auto;
+            width: 20%;
+            margin-left: 15px;          
+      }
+    p{
+        font-family: 'Baloo Da 2', cursive;
+        color: whitesmoke;
+        font-size: 13px;
+        text-align: center;
+        margin-top: 20px
+
+      }
+.error{
+    font-family: 'Baloo Da 2', cursive;
+    color: whitesmoke;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 20px
+
+  }
+footer{
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    color: whitesmoke;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    margin-top: 244px;
+  } 
+
+.footerauth{
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    color: whitesmoke;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    margin-top: 320px;
+  }
+
+  /*MOODS*/
+h1{
+  font-family: 'Baloo Da 2', cursive;
+  font-size: 30px;
+  text-decoration:none;
+  text-align: center;
+  color: whitesmoke;  
+  text-shadow: rgba(0, 0, 0, 0.413) 0.1em 0.1em 0.2em;
+  margin-top: 200px;
+}
+  
+.content-select select{
+	appearance: none;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    
+}
+
+.content-select select::-ms-expand {
+    display: none;
+
+}
+.content-select{
+	max-width: 250px;
+    position: relative;
+    margin-left: 60px;
+    
+}
+
+ 
+.content-select select{
+	display: inline-block;
+	width: 100%;
+	cursor: pointer;
+  	padding: 7px 10px;
+  	height: 42px;
+  	outline: 0; 
+  	border: 0;
+	border-radius: 0;
+	background: #f0f0f0;
+	color: #7b7b7b;
+	font-size: 1em;
+	color: #999;
+	font-family: 'Quicksand', sans-serif;
+	border:2px solid rgba(0,0,0,0.2);
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.25s ease;
+    text-align: center;
+}
+ 

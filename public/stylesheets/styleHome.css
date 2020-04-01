@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap');
 /*ROJ #E75A5F - NAR #FDB15D - AMARI #FEE698 PIO FAFADC*/
-.back-button {
-    visibility: hidden;
-  }
+
 
 body {
     background-image: url(/images/fondohome.png);
@@ -40,6 +38,7 @@ p{
   font-size: 13px;
   text-align: center;
 }
+
 .buttonlogin{
   font-family: 'Baloo Da 2', cursive;
   font-size: 14px;
