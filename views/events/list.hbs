@@ -1,36 +1,61 @@
-<link rel='stylesheet' href='/stylesheets/styleEvents.css' >
+<link rel='stylesheet' href='/stylesheets/listEvents.css'>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
 
-<div class="logoheader">
-<img class="logoname" src="/images/logoname.png">
+<div class="container-menu">
+  <div class="container-logo">
+    <img class="logoheader" src="/images/minilogoname.png">
+  </div>
+  <div class="container-icons-menu">
+    <ul >
+      <li>
+        <a href="/profile/{{currentUser._id}}" class="button-menu">
+          <img class="iconsmenu-myprofile" src="/images/profileicon-removebg-preview.png" alt="myprofile">
+        </a>
+      </li>
+      <li>
+        <a href="/"class="button-menu">
+          <img class="iconsmenu-logout" src="/images/logout-removebg-preview.png" alt="logout">
+        </a>
+      </li>
+    </ul>
+  </div>
+  
 </div>
-<div class="menu">
-<ul class="menulist">
-<li><a href="/profile/{{currentUser._id}}" class="button-menu">My Profile</a></li>
-<li><a href="/"class="button-menu">Logout</a></li>
-</ul>
+<div class="container-buttons-event-list">
+  
 </div>
 <h2>
 {{#if info}}
 {{info}}{{ currentUser.username }}
 {{/if}}
 </h2>
+</div>
 
 
 {{!-- <a href="/profile/{{currentUser._id}}">My Profile: /profile/{{currentUser._id}}</a> --}}
 
-</div>
 
 
-<div class="eventimg-list">
-<ul class="eventslist">
+<div class="container-event-list">
+  <ul>
   {{#each events }}
-  <li>
-   <h1 class="eventnamelist"><a href="/events/{{this._id}}" class="clasename">{{ this.name }}<img src=" {{!-- {{eventData.image}}--}}/images/eventPaseoPlaya.jpg" class="eventsimg"> </a></h1>
-  </li>
+    <li>
+      <div class="eventnamelist" style="margin: 40px auto; box-shadow: 1px 1px 5px #00000029;">
+        <a href="/events/{{this._id}}" class="clasename">
+          <img src="http://placeimg.com/640/350/nature?id={{this._id}}" class="eventsimg"/>
+          <div class="details-event">
+            <span class="nameEvent">{{ this.name }}</span>
+            <a href="/events/{{this._id}}" class="btn-seeEvent">See more</a>
+          </div>
+        </a>
+      </div>
+    </li>
   {{/each}}
-</ul>
+  </ul>
 </div>
 
-<a href="/events/add"class="buttonadd">+</a>
+<a href="/events/add"class="buttonadd">
+  <span>+</span>
+</a>
 
 <footer> © Copyright 2020 Gisela García and Raquel Muniesa, Barcelona </footer>
