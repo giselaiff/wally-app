@@ -1,18 +1,20 @@
 <link rel='stylesheet' href='/stylesheets/styleSingleEvent.css' class="container">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
-    
+  
+<form action="/events/add" method="post">
+ <a href="/events"class="back-button"> < </a>
     <div class="container-data-event">
         <div>
-            <h1 class="event-title"> <input class="form-create-event-name" type="text" name="title" placeholder="Title" id="form-create-event"></h1>
+            <h1 class="event-title"> <input class="form-create-event-name" type="text" name="name" placeholder="Title" id="form-create-event"></h1>
         </div>
         <div class="container-icons" >
             <div class="container-icon">
                 <img class="mood-icon" src="/images/moodicon-removebg-preview.png">
                 <h3 class="singleEvent-style">Event mood: <select class="form-create-event-mood" name="mood" id="form-create-event">
-    <option value="Chill">Chill</option>
-    <option value="Medium">Medium</option>
-    <option value="Hard">Hard</option>
-  </select></h3>
+                    <option value="Chill">Chill</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                </select></h3>
             </div>
             <div class="container-icon">
                 <img class="pinmap-icon" src="/images/pinmapicono-removebg-preview.png">
@@ -28,14 +30,11 @@
             </div>
             
             <h3 class="singleEvent-style-description">Description: <input class="form-create-event-dscription" type="text" name="description" id="form-create-event"></h3>
-    <br>   <br>   <br>   <br>   <br>   <br>   <br>  
+            <br>   <br>   <br>   <br>   <br>   <br>   <br>  
            
         {{#if error}}
-  {{error}}
-  {{/if}}
-  </div>
-<button type="submit"class="button-submit-create-event">Submit</button>
-
-
+            {{error}}
+        {{/if}}
     </div>
-
+    <button type="submit"class="button-submit-create-event">Submit</button>
+</form>

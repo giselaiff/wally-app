@@ -36,8 +36,7 @@ router.post('/add', (req, res, next) => {
 		})
         .catch(next);
     }
-});
-
+})
 
 //GET all events: /events
 
