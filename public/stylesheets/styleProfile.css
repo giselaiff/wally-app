@@ -229,3 +229,62 @@ input[name="username"]
         border-radius: 50%;
         margin-top: 27px;
       }
+
+      .content-select{
+        max-width: 250px;
+          position: relative;
+          margin-left: 60px;
+      }
+      /*select*/
+       
+      .content-select select{
+        display: inline-block;
+        width: 100%;
+        cursor: pointer;
+          padding: 7px 10px;
+          height: 45px;
+          outline: 0; 
+          border: 0;
+        border-radius: 0;
+        background: #f0f0f0;
+        color: #7b7b7b;
+        font-size: 1em;
+        color: #999;
+        font-family: 'Quicksand', sans-serif;
+        border:2px solid rgba(0,0,0,0.2);
+          border-radius: 12px;
+          position: relative;
+          transition: all 0.25s ease;
+      }
+      
+      .moodselect{
+          text-align: center;
+      
+      }
+       
+      .profile-style select{
+        display: inline-block;
+        width: 100%;
+        cursor: pointer;
+          padding: 0px 10px;
+          height: 30px;
+          width: 150px;
+          outline: 0; 
+          border: 0;
+        border-radius: 0;
+        background: transparent;
+        color: #7b7b7b;
+        font-size: 1em;
+        color: #999;
+        font-family: 'Quicksand', sans-serif;
+        border:2px solid rgba(0,0,0,0.2);
+          border-radius: 12px;
+          position: relative;
+          transition: all 0.25s ease;
+      }
+      
+      .moodselect{
+          text-align: center;
+      
+      }
+      
