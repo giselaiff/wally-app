@@ -1,8 +1,8 @@
-# Wally, find me.
+# Mood
 ​
 ## Description​
 
-Wally is a collaborative application that allows you to meet people with similar interests to yours. The user can create an event or simply attend one created by another user; In this way, Wally allows creating bridges to establish new social relationships.
+Mood is a collaborative application that allows you to meet people with similar interests to yours. The user can create an event or simply attend one created by another user; In this way, Mood allows creating bridges to establish new social relationships.
 
 ## User Stories
 ​
@@ -108,9 +108,7 @@ Event model
             type: String,
             required: true,
         },
-        /*photo: {
-            type: Image,
-        },*/,
+       
     	description: {
             type: String,
             required: true,
@@ -147,4 +145,4 @@ The url to your repository and to your deployed project
 ​
 ### Slides
 ​
-[Slides Link](https://docs.google.com/presentation/d/1tOLuwUvpzCOtFdH6OkuZ_E5bU6r55Im3P26ZLEQgAKw/edit#slide=id.p)
+[Slides Link](https://docs.google.com/presentation/d/1RSj3DO2kzvPQlDrG5emeZNPm5CB5UiTbv4Eo89P1r9c/edit#slide=id.p)
