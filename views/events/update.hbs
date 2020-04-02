@@ -1,9 +1,13 @@
 <link rel='stylesheet' href='/stylesheets/styleSingleEvent.css' class="container">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
 
+<a href="/events/{{event.id}}"class="back-button">
+    <img class="image-back" src="/images/flecha-removebg-preview.png" alt="back">
+</a>
 <form action="/events/{{event.id}}" method="post">
  <div class="container-data-event">
         <div>
+          <br>
             <h1 class="event-name"><input class="form-update-event-name" type="text" name="name" id="form-update-event" placeholder="title∫" value="{{event.name}}"></h1>
         </div>
         <div class="container-icons" >
@@ -34,7 +38,7 @@
 <br><br>
 <br><br>
   <div>
-    <button type="submit" class="buttonupdgo">Submit</button>
+    <button type="submit" class="buttoneditgo">Submit</button>
   </div>
     <br>
   </div>

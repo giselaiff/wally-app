@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap');
-/*ROJ #E75A5F - NAR #FDB15D - AMARI #FEE698 PIO FAFADC*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
+
 body{
     margin: 0;
     padding: 0;
@@ -19,17 +18,16 @@ body{
   }
 
   .user-name, .event-list{
-    color: rgba(231, 90, 95, 0.714);
+    color: rgb(231, 89, 95);
     text-align: center;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: "Montserrat";
     display: block;
  
   }
   .profile-style {
     color: rgba(0, 0, 0, 0.721);
     margin: 10px 20px 0px 0px;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat";
     line-height: 30px;
     font-size: 14px;
   
@@ -37,13 +35,12 @@ body{
   }  
   .profile-style-description{
     color: rgba(0, 0, 0, 0.721);
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat";
     line-height: 30px;
-    margin-left: 40px;
-    margin-right: 10px;
     text-align: justify;
     font-size: 14px;
+    margin-left: 41px;
+    margin-right: 58px;
 
   }
   
@@ -57,7 +54,7 @@ body{
    
   .container-icons{
     
-    background-image: url(/images/fondohome.png);
+    background-color: #ececec;
     background-repeat: no-repeat;
     -webkit-border-top-left-radius: 3%;
     -webkit-border-top-right-radius: 3%;
@@ -74,67 +71,49 @@ body{
 /*BUTTONS*/
 
 .buttonedit{
-    font-family: 'Baloo Da 2', cursive;
-    font-size: 14px;
-    text-decoration:none;
-    text-align: center;
-    color: whitesmoke;
-    padding: 3px;
-    display:block;
-    background-color: #FEE698;
-    width: 150px;
-    -webkit-border-top-left-radius: 20%;
-    -webkit-border-top-right-radius: 20%;
-    -webkit-border-bottom-left-radius: 20%;
-    -webkit-border-bottom-right-radius: 20%;
-    margin-left: 110px;
-  }
+  color: #fff;
+  font-size: 14px;
+  background: #fa6972;
+  display: block;
+  padding: 10px;
+  width: 81px;
+  margin-left: 140px;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Montserrat";
+
+}
 
   .buttondelacc{
-    font-family: 'Baloo Da 2', cursive;
+    color: #fff;
     font-size: 14px;
-    text-decoration:none;
+    display: block;
+    padding: 10px;
+    width: 102px;
+    margin-left: 140px;
     text-align: center;
-    color: whitesmoke;
-    padding: 3px;
-    display:block;
-    margin-top: 5px;
-    background-color: #FEE698;
-    width: 150px;
-    max-height: 500px;
-    margin:10px auto;
-    outline:none;
+    text-decoration: none;
+    font-family: "Montserrat";
+    outline: none;
     border: none;
-    margin-top:-30px;
-    -webkit-border-top-left-radius: 20%;
-    -webkit-border-top-right-radius: 20%;
-    -webkit-border-bottom-left-radius: 20%;
-    -webkit-border-bottom-right-radius: 20%;
-    margin-left: 110px;
-    margin-top: 2px;
+   
   }
 
 
 .buttoneditgo{
-    font-family: 'Baloo Da 2', cursive;
+  color: #fff;
     font-size: 14px;
-    text-decoration:none;
+    display: block;
+    padding: 10px;
+    width: 102px;
+    margin-left: 140px;
     text-align: center;
-    color: whitesmoke;
-    padding: 3px;
-    display:block;
-    background-color: #FEE698;
-    width: 150px;
-    max-height: 500px;
-    margin:10px auto;
-    outline:none;
+    text-decoration: none;
+    font-family: "Montserrat";
+    outline: none;
     border: none;
-    -webkit-border-top-left-radius: 20%;
-    -webkit-border-top-right-radius: 20%;
-    -webkit-border-bottom-left-radius: 20%;
-    -webkit-border-bottom-right-radius: 20%;
-    margin-left: 110px;
-    margin-bottom: 100px;
+    background: #fa6972;
+
     
   }
 
@@ -142,6 +121,9 @@ body{
 {
     background: transparent;
     border: none;
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: rgba(0, 0, 0, 0.721);
 
 }
 input[name="username"]
@@ -150,15 +132,15 @@ input[name="username"]
     border: none;
     color: rgba(231, 90, 95, 0.714);
     text-align: center;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: "Montserrat";
     font-weight: bold;
     font-size: 30px;
 
 }
 
 ::-webkit-input-placeholder {
-     font-family: 'Baloo Da 2', cursive;
-     font-size: 14px;
+  font-family: "Montserrat";
+  font-size: 14px;
     } 
 
     .content-select select{
@@ -193,7 +175,7 @@ input[name="username"]
         color: #7b7b7b;
         font-size: 1em;
         color: #999;
-        font-family: 'Quicksand', sans-serif;
+        font-family: "Montserrat";
         border:2px solid rgba(0,0,0,0.2);
         border-radius: 12px;
         position: relative;
@@ -201,16 +183,19 @@ input[name="username"]
         text-align: center;
     }
      .event-list-profile{
-      list-style-type:none;
+      list-style-type: none;
      }
 
      .name-listevent{  
       text-decoration: none;
-      color: black;
+      color: rgba(0, 0, 0, 0.721);
+      font-family: "Montserrat";
+      line-height: 30px;
+      font-size: 14px;
       }
       
       .back-button{
-        font-family: 'Baloo Da 2', cursive;
+        font-family: "Montserrat";
         font-size: 14px;
         text-decoration:none;
         text-align: center;
@@ -219,9 +204,7 @@ input[name="username"]
         display:block;
         position: absolute;
         left:10px;
-        
         margin-top: 5px;
-        background-color:  rgba(231, 90, 95, 0.714);
         width: 20px;
         margin:10px auto;
         outline:none;
@@ -250,7 +233,7 @@ input[name="username"]
         color: #7b7b7b;
         font-size: 1em;
         color: #999;
-        font-family: 'Quicksand', sans-serif;
+        font-size: 14px;
         border:2px solid rgba(0,0,0,0.2);
           border-radius: 12px;
           position: relative;
@@ -276,7 +259,7 @@ input[name="username"]
         color: #7b7b7b;
         font-size: 1em;
         color: #999;
-        font-family: 'Quicksand', sans-serif;
+        font-size: 14px;
         border:2px solid rgba(0,0,0,0.2);
           border-radius: 12px;
           position: relative;
@@ -287,4 +270,14 @@ input[name="username"]
           text-align: center;
       
       }
+      .name-profile{
+        margin-top: 10px;
+      }
       
+      .image-back{
+        width: 30px;
+      }
+
+      #user-description{
+        width: 258px;
+      }

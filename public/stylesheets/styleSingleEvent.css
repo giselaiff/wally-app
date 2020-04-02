@@ -1,6 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
 
 body{
   margin: 0;
@@ -12,25 +10,26 @@ body{
 .container-data-event{
   display: flex;
   flex-direction: column;
-  /*background-color: rgba(250, 250, 220, 0.995);*/
-  background-color: #efefef;
+  background-color: #ececec;
   -webkit-border-top-left-radius: 5%;
   -webkit-border-top-right-radius: 5%;
   margin-top: 250px;
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 .event-name, .event-title{
   color: rgb(231, 89, 95);
   margin-top: 10px;
   text-align: center;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 
 .singleEvent-style {
   color: rgba(0, 0, 0, 0.721);
   margin: 10px 20px 0px 0px;
-  font-family: 'Open Sans Condensed', sans-serif;
   font-family: 'Montserrat', sans-serif;
   line-height: 30px;
   font-size: 14px;
@@ -38,14 +37,13 @@ body{
 
 }
 .singleEvent-style-description{
-  color: rgba(0, 0, 0, 0.721);
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-family: 'Montserrat', sans-serif;
-  line-height: 30px;
-  margin-left: 10px;
-  margin-right: 10px;
-  text-align: justify;
-  font-size: 14px;
+    color: rgba(0, 0, 0, 0.721);
+    font-family: "Montserrat";
+    line-height: 30px;
+    text-align: justify;
+    font-size: 14px;
+    margin-left: 24px;
+    margin-right: 17px;
 
 }
 
@@ -78,23 +76,23 @@ body{
 /*BUTTONS*/
 
 .button-update-event{
-  font-family: 'Baloo Da 2', cursive;
-    font-size: 14px;
-    text-decoration:none;
-    text-align: center;
-    color: whitesmoke;
-    padding: 3px;
-    display:block;
-    background-color: #FEE698;
-    width: 150px;
-    -webkit-border-top-left-radius: 20%;
-    -webkit-border-top-right-radius: 20%;
-    -webkit-border-bottom-left-radius: 20%;
-    -webkit-border-bottom-right-radius: 20%;
-    margin-left: 90px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  text-decoration:none;
+  text-align: center;
+  color: whitesmoke;
+  padding: 3px;
+  display:block;
+  background-color: #FEE698;
+  width: 150px;
+  -webkit-border-top-left-radius: 20%;
+  -webkit-border-top-right-radius: 20%;
+  -webkit-border-bottom-left-radius: 20%;
+  -webkit-border-bottom-right-radius: 20%;
+  margin-left: 90px;
 }
 .button-delete-event{
-  font-family: 'Baloo Da 2', cursive;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   text-decoration:none;
   text-align: center;
@@ -118,7 +116,7 @@ body{
 }
 
 .buttonupdgo{
-  font-family: 'Baloo Da 2', cursive;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   text-decoration:none;
   text-align: center;
@@ -145,37 +143,42 @@ input[type="text"]
 {
     background: transparent;
     border: none;
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: rgba(0, 0, 0, 0.721);
 
 }
 input[type="date"]
 {
     background: transparent;
     border: none;
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: rgba(0, 0, 0, 0.721);
 
 }
 input[name="name"]
 {
-    background: transparent;
-    border: none;
-    color: rgba(231, 90, 95, 0.714);
-    text-align: center;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-weight: bold;
-    font-size: 30px;
+  background: transparent;
+  border: none;
+  color: rgba(231, 90, 95, 0.714);
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
 
 }
 
 ::-webkit-input-placeholder {
-     font-family: 'Baloo Da 2', cursive;
-     font-size: 14px;
-    } 
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+} 
 
-    .content-select select{
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        
-    }
+.content-select select{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
     
     .content-select select::-ms-expand {
         display: none;
@@ -202,7 +205,7 @@ input[name="name"]
         color: #7b7b7b;
         font-size: 1em;
         color: #999;
-        font-family: 'Quicksand', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         border:2px solid rgba(0,0,0,0.2);
         border-radius: 12px;
         position: relative;
@@ -211,7 +214,7 @@ input[name="name"]
     }
      
     .button-join{
-      font-family: 'Baloo Da 2', cursive;
+      font-family: 'Montserrat', sans-serif;
       font-size: 14px;
       text-decoration:none;
       text-align: center;
@@ -235,42 +238,55 @@ input[name="name"]
 
     .joins{
       color: rgba(231, 90, 95, 0.714);
-      font-family: 'Baloo Da 2', cursive;
+      font-family: 'Montserrat', sans-serif;
       font-size: 20px;
+      text-align: center;
+
     }
 
     .join-list{
-      list-style-type:none;
-     
+      list-style-type: none;
+      padding: 0px;
     }
+
+    .join-list li{
+      margin-left: 30px ;
+    }
+    
     .event-listname{
       text-decoration: none;
-      color: black;
+      color: rgba(0, 0, 0, 0.721);
+      font-family: "Montserrat";
+      line-height: 30px;
+      font-size: 14px;
+      
     }
 
     .back-button{
-      font-family: 'Baloo Da 2', cursive;
+      font-family: "Montserrat";
       font-size: 14px;
       text-decoration:none;
       text-align: center;
       color: whitesmoke;
-      padding: 6px;
+      padding: 3px;
       display:block;
       position: absolute;
       left:10px;
       margin-top: 5px;
-      background-color:  #e7595f;
       width: 20px;
       margin:10px auto;
       outline:none;
       border: none;
       border-radius: 50%;
-      margin-top: 20px;
+      margin-top: 27px;
+    }
+    .image-back{
+      width: 30px;
     }
 
     .button-submit-create-event{
-      font-family: 'Baloo Da 2', cursive;
-  font-size: 14px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
   text-decoration:none;
   text-align: center;
   color: whitesmoke;
@@ -297,7 +313,7 @@ input[name="name"]
         border: none;
         color: rgba(231, 90, 95, 0.714);
         text-align: center;
-        font-family: 'Open Sans Condensed', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         font-weight: bold;
         font-size: 30px;
     
@@ -319,7 +335,7 @@ input[name="name"]
     color: #7b7b7b;
     font-size: 1em;
     color: #999;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     border:2px solid rgba(0,0,0,0.2);
       border-radius: 12px;
       position: relative;
@@ -330,4 +346,69 @@ input[name="name"]
       text-align: center;
   
   }
-   
+
+  .buttonedit{
+    color: #fff;
+    font-size: 14px;
+    background: #fa6972;
+    display: block;
+    padding: 10px;
+    width: 81px;
+    margin-left: 120px;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Montserrat";
+  
+  }
+  
+    .buttondelacc{
+      color: #fff;
+      font-size: 14px;
+      display: block;
+      padding: 10px;
+      width: 102px;
+      margin-left: 120px;
+      text-align: center;
+      text-decoration: none;
+      font-family: "Montserrat";
+      outline: none;
+      border: none;
+     
+    }
+    .buttoneditgo{
+      color: #fff;
+        font-size: 14px;
+        display: block;
+        padding: 10px;
+        width: 102px;
+        margin-left: 120px;
+        text-align: center;
+        text-decoration: none;
+        font-family: "Montserrat";
+        outline: none;
+        border: none;
+        background: #fa6972;
+    
+        
+      }
+      .image-back{
+        width: 30px;
+      }
+      .back-button{
+        font-family: "Montserrat";
+        font-size: 14px;
+        text-decoration:none;
+        text-align: center;
+        color: whitesmoke;
+        padding: 3px;
+        display:block;
+        position: absolute;
+        left:10px;
+        margin-top: 5px;
+        width: 20px;
+        margin:10px auto;
+        outline:none;
+        border: none;
+        border-radius: 50%;
+        margin-top: 27px;
+      }

@@ -1,13 +1,16 @@
 <link rel='stylesheet' href='/stylesheets/styleProfile.css' >
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
 
+<a href="/profile/{{profileData._id}}"class="back-button">
+    <img class="image-back" src="/images/flecha-removebg-preview.png" alt="back">
+</a>
 <form action="/profile/{{profileData._id}}" method="post">
 <div class="container-individual-profile">
  
  </div>
    <div class="container-icons" >  
-    
-     <h1 class="user-name"><input name="username" id="user-name" placeholder="Name" value="{{profileData.username}}"></h1>
+    <br>
+     <h1 class="user-name"><input name="username"  placeholder="Name" value="{{profileData.username}}"></h1>
      <div class="container-icon">
                 <img class="age-icon" src="/images/ageicon.png">
                 <h3 class="profile-style">Age:  <input type="text" name="age" id="user-age" placeholder="Age" value="{{profileData.age}}"></h3>
@@ -26,10 +29,14 @@
     <option value="Hard">🤪&nbsp;&nbsp;&nbsp;&nbsp;Hard mood</option>
   </select></h3> 
   </div></h3>
-   <br>
+   
 
 <h3 class="profile-style-description"><input type="text" name="description" id="user-description"placeholder="About me" value="{{profileData.description}}"></h3>
-   
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
   <button type="submit"class="buttoneditgo">Submit</button>
  <br>
 

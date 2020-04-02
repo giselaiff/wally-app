@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
+
 body{
     padding: 0px;
     margin: 0px;
@@ -36,6 +38,7 @@ body{
 }
 .iconsmenu-logout{
     width: 30px;
+    margin-right: 8px;
 }
 .container-icons-menu ul{
     display: flex;
@@ -82,11 +85,11 @@ body{
 }
 .buttonadd{
     font-family: Montserrat;
-    font-size: 30px;
+    font-size: 25px;
     text-decoration: none;
     text-align: center;
     color: whitesmoke;
-    padding: 3px;
+    padding: 1px;
     display: block;
     background-color: #E75A5F;
     width: 50px;
@@ -102,6 +105,7 @@ body{
     display: flex;
     justify-content: center ;
     align-items: center;
+    border: solid 1px white;
 }
 footer{
     width: 100%;
@@ -111,4 +115,8 @@ footer{
     text-shadow: black 0.1em 0.1em 0.2em;
     margin-top: 50px;
     margin-bottom: 5px;
+  }
+  .flash-welcome{
+      text-align: center;
+      color: #000000a6;
   }

@@ -8,7 +8,7 @@ const router = express.Router();
 const saltRounds = 10;
 
 router.get('/', (req, res, next) => {
-	res.render('index', { title: 'W a l l y' });
+	res.render('index', { title: 'M o o d' });
 });
 
 router.get('/signup', (req, res, next) => {

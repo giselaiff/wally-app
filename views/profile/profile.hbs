@@ -1,13 +1,18 @@
 <link rel='stylesheet' href='/stylesheets/styleProfile.css' >
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
    
-   <a href="/events"class="back-button"> < </a>
+  <a href="/events"class="back-button">
+    <img class="image-back" src="/images/flecha-removebg-preview.png" alt="back">
+  </a>
 
 <div class="container-individual-profile">
  
  </div>
-   <div class="container-icons" >  
-     <h1 class="user-name">{{currentUser.username}}</h1>
+   <div class="container-icons">
+     <div class="name-profile">
+       <br>
+        <h1 class="user-name">{{currentUser.username}}</h1>
+     </div>  
      <div class="container-icon">
                 <img class="age-icon" src="/images/ageicon.png">
                 <h3 class="profile-style">Age: {{currentUser.age}}</h3>
@@ -23,10 +28,10 @@
         <h3 class="profile-style">Mood: {{currentUser.mood}}</h3>
  </div>
            
-<h3 class="profile-style-description">{{currentUser.description}}</h3>
+<p class="profile-style-description">{{currentUser.description}}</p>
 
 
-  <h1 class="event-list">Joined events:</h1>
+  <p class="event-list">Joined events:</p>
     <ul class="event-list-profile">
   {{#each myEvents }}
   <li>
@@ -41,11 +46,9 @@
 <a href="/profile/{{currentUser._id}}/edit"class="buttonedit">Edit</a>
 
 <br>
-
-
 <form action="/profile/{{currentUser._id}}/delete" onclick="return confirm('Are you sure you want to delete your account?');" method="post">
-      <button class="buttondelacc" type="submit">Delete account</button>
-    </form> 
+  <button class="buttondelacc" type="submit">Delete</button>
+</form> 
 
 
 
