@@ -33,7 +33,9 @@
                 <h3 class="singleEvent-style"> Hour: <input class="form-create-event-hour" type="text" placeholder="00:00" name="hour" id="form-create-event"></h3>
             </div>
             
-            <h3 class="singleEvent-style-description">Description: <input class="form-create-event-dscription" type="text" name="description" id="form-create-event"></h3>
+            <textarea name="description" rows="10" cols="50" placeholder="Description"></textarea>
+
+            {{!-- <h3 class="singleEvent-style-description">Description: <input class="form-create-event-dscription" type="text" name="description" id="form-create-event"></h3> --}}
             <br>   <br>   <br>   
            
         {{#if error}}
