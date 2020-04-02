@@ -40,7 +40,7 @@ body{
     text-align: justify;
     font-size: 14px;
     margin-left: 41px;
-    margin-right: 58px;
+    margin-right: 40px;
 
   }
   
@@ -124,6 +124,25 @@ body{
     font-size: 14px;
     font-family: "Montserrat";
     color: rgba(0, 0, 0, 0.721);
+
+}
+
+textarea
+{
+    background: transparent;
+    border: none;
+    color: rgba(0, 0, 0, 0.721);
+    font-family: "Montserrat";
+    line-height: 30px;
+    text-align: justify;
+    font-size: 14px;
+    height: 20px;
+    min-width: 300px;
+    min-height: 250px;
+    max-width: 300px;
+    margin-left: 30px;
+    margin-top: 20px;
+    padding: 10px;
 
 }
 input[name="username"]
