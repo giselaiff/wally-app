@@ -36,7 +36,7 @@ input[type="text"]
     border: none;
     margin-top: 150px;
     text-align: center;
-    margin-left:  50px;
+    margin-left:  70px;
     color: rgba(245, 245, 245, 0.769); 
 
 }
@@ -47,7 +47,7 @@ input[type="password"]
     border: none;
     margin-top: 20px;
     text-align: center;
-    margin-left: 50px;
+    margin-left: 70px;
     color: rgba(245, 245, 245, 0.769); 
 }
 
