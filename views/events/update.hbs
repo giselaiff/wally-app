@@ -1,14 +1,14 @@
 <link rel='stylesheet' href='/stylesheets/styleSingleEvent.css' class="container">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
 
-<a href="/events/{{event.id}}"class="back-button">
+<a href="/events/{{event._id}}"class="back-button">
     <img class="image-back" src="/images/flecha-removebg-preview.png" alt="back">
 </a>
-<form action="/events/{{event.id}}" method="post">
+<form action="/events/{{event._id}}" method="post">
  <div class="container-data-event">
         <div>
           <br>
-            <h1 class="event-name"><input class="form-update-event-name" type="text" name="name" id="form-update-event" placeholder="title∫" value="{{event.name}}"></h1>
+            <h1 class="event-name"><input class="form-update-event-name" type="text" name="name" id="form-update-event" placeholder="Title" value="{{event.name}}"></h1>
         </div>
         <div class="container-icons" >
             <div class="container-icon">
@@ -32,7 +32,7 @@
                 <h3 class="singleEvent-style"> Hour:  <input class="form-update-event-hour" type="text" name="hour" id="form-update-event" value="{{event.hour}}"></h3>
             </div>
             
-            <h3 class="singleEvent-style-description"><input class="form-update-event-description" type="text" name="description" id="form-update-event" value="{{event.description}}"></h3>
+            <h3 class="singleEvent-style-description"><input class="form-update-event-description" type="text" name="description" id="form-update-event" placeholder="Description" value="{{event.description}}"></h3>
 
  <br> <br> 
 <br><br>

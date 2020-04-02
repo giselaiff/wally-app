@@ -412,3 +412,17 @@ input[name="name"]
         border-radius: 50%;
         margin-top: 27px;
       }
+      .buttoneditcreate{
+        color: #fff;
+        font-size: 14px;
+        display: block;
+        padding: 10px;
+        width: 102px;
+        margin-left: 140px;
+        text-align: center;
+        text-decoration: none;
+        font-family: "Montserrat";
+        outline: none;
+        border: none;
+        background: #fa6972;
+      }
